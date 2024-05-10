@@ -1,12 +1,11 @@
 import { View, Text, Image } from "react-native";
-import {
-  DrawerContentScrollView,
-  DrawerItemList,
-} from "@react-navigation/drawer";
+import { DrawerContentScrollView, DrawerItemList, } from "@react-navigation/drawer";
 
 export default function CustomDrawer(props) {
   return (
+    // Componente de rolagem para o conteúdo do drawer
     <DrawerContentScrollView>
+      {/* Cabeçalho do drawer */}
       <View
         style={{
           width: "100%",
@@ -18,10 +17,14 @@ export default function CustomDrawer(props) {
           borderColor: "#d4a57b",
         }}
       >
+
+        {/* Ícone do cabeçalho */}
         <Image
-          source={require("../assets/icons/coffee-cup.png")}
+          source={require("../assets/icons/graos.png")}
           style={{ width: 65, height: 65 }}
         />
+        
+        {/* Texto de boas-vindas */}
         <Text
           style={{
             fontFamily: "TitanOne-Regular",
@@ -41,6 +44,7 @@ export default function CustomDrawer(props) {
           </Text>
         </Text>
       </View>
+      {/* Lista de itens do drawer */}
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
