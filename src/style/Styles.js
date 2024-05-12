@@ -144,7 +144,7 @@ export const styles = StyleSheet.create({
     marginTop: 15,
   },
 
-  ImgLogoSaiba: {
+  ImgSobreNós: {
     alignItems: "center",
     justifyContent: "center",
   },

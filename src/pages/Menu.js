@@ -144,6 +144,14 @@ export default function Menu() {
           </TouchableOpacity>
         </View>
         
+        <Text style={{
+        fontSize: 25, 
+        fontFamily: "TitanOne-Regular",
+        marginTop: 15,
+        left: 30,
+        color: '#d4a57b',}}
+        > Populares </Text>
+
         {/* Carrossel de imagens */}
         <View style={{ height: 400, justifyContent: "center", alignItems: "center" }}>
           <Carousel data={data} 
@@ -158,6 +166,248 @@ export default function Menu() {
 
         
         <View style={{ height: 300, width: "100%", backgroundColor: "white" }} />
+
+
+        <View style={{ 
+        height: 300, 
+        width: "100%", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        marginTop: -240, 
+        backgroundColor: 'white',}}>
+
+      <Text style={{
+        fontSize: 25, 
+        fontFamily: "TitanOne-Regular",
+        marginBottom: 65,
+        marginTop: -60,
+        color: '#d4a57b',
+        left: -100,}}
+        > Cardápio </Text>
+
+      <Text style={{
+        fontSize: 15, 
+        fontFamily: "TitanOne-Regular",
+        marginBottom: 10,
+        left: -140,
+        color: '#d4a57b',}}
+        > Cafés </Text>
+      
+      {/* Container para cada item */}
+      <View style={{ 
+        width: 340, 
+        height: 130, 
+        alignItems: "flex-end", 
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 5 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 10, 
+        elevation: 5, 
+        borderRadius: 20, 
+        backgroundColor: "white" }}>
+       
+        {/* Imagem do item */}
+        <Image source={require("../assets/image/coffeHot1.png")} 
+        style={{ width: 120, 
+        height: 120, 
+        position: "relative", 
+        top: 10, 
+        right: 240, }} />
+        
+        {/* Detalhes do item */}
+        <View style={{ width: 240, top: -120, padding: 15 }}>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 5,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ color: "gray" }}
+          >O ...</Text>
+          
+          {/* Botão de adicionar */}
+          <TouchableOpacity style={{ 
+            left: 190, 
+            top: 15,
+            width: 40, 
+            height: 40, 
+            borderRadius: 10, 
+            backgroundColor: "#d4a57b", 
+            justifyContent: "center", 
+            alignItems: "center" }}>
+            <AntDesign color="white" size={25} name="plus" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+
+
+
+    <View style={{ 
+        height: 190, 
+        width: "100%", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        backgroundColor: 'white',
+        marginTop: -40, }}>
+      
+      {/* Container para cada item */}
+      <View style={{ 
+        width: 340, 
+        height: 130, 
+        alignItems: "flex-end", 
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 5 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 10, 
+        elevation: 5, 
+        borderRadius: 20, 
+        backgroundColor: "white" }}>
+       
+        {/* Imagem do item */}
+        <Image source={require("../assets/image/coffeeHot2.png")} 
+        style={{ 
+        width: 120, 
+        height: 120, 
+        position: "relative", 
+        top: 0, 
+        right: 240, }} />
+        
+        {/* Detalhes do item */}
+        <View style={{ width: 240, top: -120, padding: 15 }}>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ color: "gray" }}
+          >O ...</Text>
+          
+          {/* Botão de adicionar */}
+          <TouchableOpacity style={{ 
+            left: 190, 
+            top: 15,
+            width: 40, 
+            height: 40, 
+            borderRadius: 10, 
+            backgroundColor: "#d4a57b", 
+            justifyContent: "center", 
+            alignItems: "center" }}>
+            <AntDesign color="white" size={25} name="plus" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+
+    
+
+    <View style={{ 
+        height: 190, 
+        width: "100%", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        backgroundColor: 'white',
+        marginTop: -15, }}>
+
+    <Text style={{
+        fontSize: 15, 
+        fontFamily: "TitanOne-Regular",
+        marginBottom: 10,
+        left: -140,
+        color: '#d4a57b',}}
+        > Chás </Text>
+      
+      {/* Container para cada item */}
+      <View style={{ 
+        width: 340, 
+        height: 130, 
+        alignItems: "flex-end", 
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 5 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 10, 
+        elevation: 5, 
+        borderRadius: 20, 
+        backgroundColor: "white" }}>
+       
+        {/* Imagem do item */}
+        <Image source={require("../assets/image/coffeeHot3.png")} 
+        style={{ 
+        width: 110, 
+        height: 100, 
+        position: "relative", 
+        top: 5, 
+        right: 240, }} />
+        
+        {/* Detalhes do item */}
+        <View style={{ width: 240, top: -110, padding: 15 }}>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ color: "gray" }}
+          >O ...</Text>
+          
+          {/* Botão de adicionar */}
+          <TouchableOpacity style={{ 
+            left: 190, 
+            top: 15,
+            width: 40, 
+            height: 40, 
+            borderRadius: 10, 
+            backgroundColor: "#d4a57b", 
+            justifyContent: "center", 
+            alignItems: "center" }}>
+            <AntDesign color="white" size={25} name="plus" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+
+    <View style={{ 
+        height: 190, 
+        width: "100%", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        backgroundColor: 'white',
+        marginTop: -2, }}>
+      
+      {/* Container para cada item */}
+      <View style={{ 
+        width: 340, 
+        height: 130, 
+        alignItems: "flex-end", 
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 5 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 10, 
+        elevation: 5, 
+        borderRadius: 20, 
+        backgroundColor: "white" }}>
+       
+        {/* Imagem do item */}
+        <Image source={require("../assets/image/coffeeHot4.png")} 
+        style={{ 
+        width: 110, 
+        height: 100, 
+        position: "relative", 
+        top: 5, 
+        right: 240, }} />
+        
+        {/* Detalhes do item */}
+        <View style={{ width: 240, top: -110, padding: 15 }}>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ color: "gray" }}
+          >O ...</Text>
+          
+          {/* Botão de adicionar */}
+          <TouchableOpacity style={{ 
+            left: 190, 
+            top: 20,
+            width: 40, 
+            height: 40, 
+            borderRadius: 10, 
+            backgroundColor: "#d4a57b", 
+            justifyContent: "center", 
+            alignItems: "center" }}>
+            <AntDesign color="white" size={25} name="plus" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+
       </ScrollView>
     </View>
   );
