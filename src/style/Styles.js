@@ -147,6 +147,8 @@ export const styles = StyleSheet.create({
   ImgSobreNós: {
     alignItems: "center",
     justifyContent: "center",
+    height: 10,
+    width: 10,
   },
 
   BtnSaibaPG: {
@@ -172,4 +174,6 @@ export const styles = StyleSheet.create({
     height: 120,
     backgroundColor: "#d4a57b",
   },
+
+
 });

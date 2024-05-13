@@ -5,7 +5,7 @@ import { styles } from "./src/style/Styles";
 import Home from "./src/pages/Home";
 import Login from "./src/pages/Login";
 import Cadastro from "./src/pages/Cadastro";
-import Saiba from "./src/pages/Saiba";
+import Sobre from "./src/pages/Sobre";
 import Menu from "./src/pages/Menu";
 import CustomDrawer from "./src/componentes/CustomDrawer";
 
@@ -31,6 +31,7 @@ export default function App() {
           drawerActiveBackgroundColor: "#d4a57b",
         }}
       >
+
         <Drawer.Screen
           name="Home"
           component={Home}
@@ -40,7 +41,7 @@ export default function App() {
         />
         <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Cadastro" component={Cadastro} />
-        <Drawer.Screen name="Saiba" component={Saiba} />
+        <Drawer.Screen name="Sobre" component={Sobre} />
         <Drawer.Screen
           name="Menu"
           component={Menu}

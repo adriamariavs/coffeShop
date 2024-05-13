@@ -21,6 +21,7 @@ const data = [
 // Função para renderizar cada item do carrossel
 function CarouselCardItem({ item }) {
   return (
+
     <View style={{ height: 400, 
     width: "100%", 
     justifyContent: "center", 
@@ -169,7 +170,7 @@ export default function Menu() {
 
 
         <View style={{ 
-        height: 300, 
+        height: 308, 
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
@@ -218,8 +219,8 @@ export default function Menu() {
         <View style={{ width: 240, top: -120, padding: 15 }}>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 5,00</Text>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
-          <Text style={{ color: "gray" }}
-          >O ...</Text>
+          <Text style={{ color: "gray", marginTop: 5, }}
+          >Um sabor intenso e inesquecivel.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -240,7 +241,7 @@ export default function Menu() {
 
 
     <View style={{ 
-        height: 190, 
+        height: 220, 
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
@@ -272,9 +273,9 @@ export default function Menu() {
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -120, padding: 15 }}>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café com leite</Text>
           <Text style={{ color: "gray" }}
-          >O ...</Text>
+          >Cremoso, reconfortante e cheio de sabor.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -295,7 +296,7 @@ export default function Menu() {
     
 
     <View style={{ 
-        height: 190, 
+        height: 210, 
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
@@ -334,10 +335,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -110, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de hortelã</Text>
           <Text style={{ color: "gray" }}
-          >O ...</Text>
+          >Refresque seu dia com nosso chá quente de hortelã e limão</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -356,7 +357,7 @@ export default function Menu() {
     </View>
 
     <View style={{ 
-        height: 190, 
+        height: 210, 
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
@@ -388,14 +389,130 @@ export default function Menu() {
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -110, padding: 15 }}>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de gengibre</Text>
           <Text style={{ color: "gray" }}
-          >O ...</Text>
+          >Explosão de sabor que aquece o corpo e acalma a alma.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
             left: 190, 
             top: 20,
+            width: 40, 
+            height: 40, 
+            borderRadius: 10, 
+            backgroundColor: "#d4a57b", 
+            justifyContent: "center", 
+            alignItems: "center" }}>
+            <AntDesign color="white" size={25} name="plus" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+
+
+
+<View style={{ 
+  height: 190, 
+  width: "100%", 
+  justifyContent: "center", 
+  alignItems: "center", 
+  backgroundColor: 'white',
+  marginTop: -15, }}>
+
+<Text style={{
+  fontSize: 15, 
+  fontFamily: "TitanOne-Regular",
+  marginBottom: 10,
+  left: -120,
+  color: '#d4a57b',}}
+  > Chocolates </Text>
+
+{/* Container para cada item */}
+<View style={{ 
+  width: 340, 
+  height: 130, 
+  alignItems: "flex-end", 
+  shadowColor: "#000", 
+  shadowOffset: { width: 0, height: 5 }, 
+  shadowOpacity: 0.5, 
+  shadowRadius: 10, 
+  elevation: 5, 
+  borderRadius: 20, 
+  backgroundColor: "white" }}>
+ 
+  {/* Imagem do item */}
+  <Image source={require("../assets/image/coffeeHot5.png")} 
+  style={{ 
+  width: 120, 
+  height: 145, 
+  position: "relative", 
+  top: -25, 
+  right: 240, }} />
+  
+  {/* Detalhes do item */}
+  <View style={{ width: 240, top: -152, padding: 15 }}>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate misto</Text>
+    <Text style={{ color: "gray", marginTop: 5, }}
+    > Quente, cremoso e delicioso.</Text>
+    
+    {/* Botão de adicionar */}
+    <TouchableOpacity style={{ 
+      left: 190, 
+      top: 15,
+      width: 40, 
+      height: 40, 
+      borderRadius: 10, 
+      backgroundColor: "#d4a57b", 
+      justifyContent: "center", 
+      alignItems: "center" }}>
+      <AntDesign color="white" size={25} name="plus" />
+    </TouchableOpacity>
+  </View>
+</View>
+</View>
+
+<View style={{ 
+        height: 210, 
+        width: "100%", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        backgroundColor: 'white',
+        marginTop: -2, }}>
+      
+      {/* Container para cada item */}
+      <View style={{ 
+        width: 340, 
+        height: 130, 
+        alignItems: "flex-end", 
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 5 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 10, 
+        elevation: 5, 
+        borderRadius: 20, 
+        backgroundColor: "white" }}>
+       
+        {/* Imagem do item */}
+        <Image source={require("../assets/image/coffeeHot6.png")} 
+        style={{ 
+        width: 100, 
+        height: 140, 
+        position: "relative", 
+        top: -15, 
+        right: 245, }} />
+        
+        {/* Detalhes do item */}
+        <View style={{ width: 240, top: -152, padding: 15 }}>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ color: "gray" }}
+          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          
+          {/* Botão de adicionar */}
+          <TouchableOpacity style={{ 
+            left: 190, 
+            top: -9,
             width: 40, 
             height: 40, 
             borderRadius: 10, 
