@@ -7,6 +7,7 @@ import Login from "./src/pages/Login";
 import Cadastro from "./src/pages/Cadastro";
 import Sobre from "./src/pages/Sobre";
 import Menu from "./src/pages/Menu";
+import Carrinho from "./src/pages/Carrinho";
 import CustomDrawer from "./src/componentes/CustomDrawer";
 
 import { useFonts } from "expo-font";
@@ -25,16 +26,15 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator
         drawerContent={CustomDrawer}
-        initialRouteName="Menu"
+        initialRouteName="Carrinho"
         screenOptions={{
           drawerActiveTintColor: "black",
           drawerActiveBackgroundColor: "#d4a57b",
         }}
       >
-
         <Drawer.Screen
-          name="Home"
-          component={Home}
+          name="Carrinho"
+          component={Carrinho}
           options={{
             headerStyle: { backgroundColor: "white" },
           }}

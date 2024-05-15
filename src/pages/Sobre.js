@@ -29,7 +29,7 @@ export default function Sobre() {
             justifyContent: "center",
             alignItems: "center",
             marginTop: 30,
-            backgroundColor: '#DCDCDC',
+            backgroundColor: 'white',
           }}>
         
         <Text style={{
@@ -52,7 +52,7 @@ export default function Sobre() {
 
 
       <View style={{
-            height: 230,
+            height: 430,
             width: "100%",
             justifyContent: "center",
             alignItems: "center",
@@ -81,11 +81,11 @@ export default function Sobre() {
 
 
       <View style={{
-            height: 230,
+            height: 350,
             width: "100%",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: 'white',
+            backgroundColor: '#DCDCDC',
           }}>
         
        <Text style={{

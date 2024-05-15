@@ -86,8 +86,9 @@ export const styles = StyleSheet.create({
   TelaLogin: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     paddingTop: 35,
+    marginBottom: 100,
   },
 
   InputName: {
@@ -103,8 +104,9 @@ export const styles = StyleSheet.create({
   ViewCadastro: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     paddingTop: 60,
+    marginBottom: 80,
   },
 
   TituloCds: {
@@ -170,10 +172,59 @@ export const styles = StyleSheet.create({
     borderBottomLeftRadius: "20",
     backgroundColor: "#d4a57b",
   },
+
   header: {
     height: 120,
     backgroundColor: "#d4a57b",
   },
 
+  View1: { 
+    height: 400, 
+    width: "100%", 
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: 30 
+  },
+
+  ViewContainerMenu: {
+    width: 250, 
+    height: 250, 
+    alignItems: "flex-end", 
+    shadowColor: "#000", 
+    shadowOffset: { width: 0, height: 5 }, 
+    shadowOpacity: 0.5, 
+    shadowRadius: 10, 
+    elevation: 5, 
+    borderRadius: 20, 
+    backgroundColor: "white" 
+  },
+
+  TouchableMenuAdd: { 
+    left: 215, 
+    width: 40, 
+    height: 40, 
+    borderRadius: 10, 
+    backgroundColor: "#d4a57b", 
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+  navbar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#6200ea',
+    paddingVertical: 10,
+  },
+  
+   imgsourceitem: {
+    width: 140, 
+    height: 190, 
+    position: "relative", 
+    right: -40,
+   },
+  //Pagamento
+  Header: {
+    backgroundColor:"#d4a57b",
+    height:120,
+  }
 
 });
