@@ -11,6 +11,14 @@ export default function Carrinho() {
 
   return (
 
+    <View style={{ 
+      height: 210, 
+      width: "100%", 
+      justifyContent: "center", 
+      alignItems: "center", 
+      backgroundColor: 'white',
+      marginTop: -20,}}>
+
     <View style={styles.Header}>
              <ButtonComponents
               styles={styles.BtnSaiba}
@@ -18,6 +26,7 @@ export default function Carrinho() {
               title= "Voltar"
               />
 
+    </View>
     </View>
 )
 }
