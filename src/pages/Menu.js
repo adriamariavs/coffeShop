@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { View, Image, Text, TouchableOpacity, ScrollView, Animated, } from "react-native";
 import { styles } from "../style/Styles"; 
-import { useNavigation } from "@react-navigation/native"; 
+import { useNavigation } from "@react-navigation/native";
 
 // Importações de imagens e ícones
 import Carousel from "react-native-snap-carousel"; // Importando componente de carrossel
@@ -29,28 +29,10 @@ const data = [
 function CarouselCardItem({ item }) {
   return (
 
-    <View style={{ 
-      height: 400, 
-      width: "100%", 
-      justifyContent: "center", 
-      alignItems: "center", 
-      marginTop: 30 
-    }}>
+    <View style={styles.ViewMenu}>
       
       {/* Container para cada item */}
-      <View style={{
-    width: 250, 
-    height: 250, 
-    alignItems: "flex-end", 
-    shadowColor: "#000", 
-    shadowOffset: { width: 0, height: 5 }, 
-    shadowOpacity: 0.5, 
-    shadowRadius: 10, 
-    elevation: 5, 
-    borderRadius: 20, 
-    backgroundColor: "white" 
-  }}>
-       
+      <View style={styles.ViewContainerMenu}>
         {/* Imagem do item */}
 <Image source={(item.imgUrl)} 
         style={[ styles.imgsourceitem, { top: item.topImg}]} />
@@ -63,18 +45,8 @@ function CarouselCardItem({ item }) {
           >{item.text}</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-    left: 215, 
-    marginTop: 30,
-    marginRight: 80,
-    width: 40, 
-    height: 40, 
-    borderRadius: 10, 
-    backgroundColor: "#d4a57b", 
-    justifyContent: "center", 
-    alignItems: "center" 
-  }}>
-            <AntDesign color="white" size={25} name="plus"/>
+          <TouchableOpacity style={styles.TouchableMenuAdd}>
+            <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
       </View>
@@ -117,12 +89,11 @@ export default function Menu() {
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
       {/* Contêiner de rolagem */}
       <ScrollView ref={scrollViewRef} showsVerticalScrollIndicator={false}>
+      <AntDesign name="shoppingcart" style={styles.carrinho} size={24} color="black" onPress={() => navigation.navigate("Carrinho")}/>
         
         {/* Animação de fundo */}
-        <Animated.View style={{ backgroundColor: "#d4a57b", 
-        height: heightValue, 
-        borderBottomLeftRadius: 100 }} />
-        
+        <Animated.View style={[styles.animatedViewMenu, {height: heightValue}]} />
+       
         {/* Barra de botões */}
         <View style={{ flexDirection: "row", 
         height: 70, 
@@ -130,10 +101,7 @@ export default function Menu() {
         justifyContent: "space-around" }}>
           
           {/* Botão Hot Coffee */}
-          <TouchableOpacity style={{ padding: 5, 
-            justifyContent: "center", 
-            alignItems: "center", 
-            backgroundColor: selectedButton === "bebidasQuentes" ? "white" : "white" }} 
+          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasQuentes" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(650); setSelectedButton("bebidasQuentes")}}>
             <Text style={{ color: selectedButton === "bebidasQuentes" ? "#d4a57b" : "black" }}
             >Bebidas quentes</Text>
@@ -142,10 +110,7 @@ export default function Menu() {
           </TouchableOpacity>
           
           {/* Botão Cold Coffee */}
-          <TouchableOpacity style={{ padding: 5, 
-            justifyContent: "center", 
-            alignItems: "center", 
-            backgroundColor: selectedButton === "bebidasGeladas" ? "white" : "white" }} 
+          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasGeladas" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(1950); setSelectedButton("bebidasGeladas")}}>
             <Text style={{ color: selectedButton === "bebidasGeladas" ? "#d4a57b" : "black" }}
             >Bebidas Geladas</Text>
@@ -154,10 +119,7 @@ export default function Menu() {
           </TouchableOpacity>
          
           {/* Botão Cookies */}
-          <TouchableOpacity style={{ padding: 5, 
-            justifyContent: "center", 
-            alignItems: "center", 
-            backgroundColor: selectedButton === "comidas" ? "white" : "white" }} 
+          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "comidas" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(3210); setSelectedButton("comidas")}}>
             <Text style={{ color: selectedButton === "comidas" ? "#d4a57b" : "black" }}
             >Comidas</Text>
@@ -166,12 +128,7 @@ export default function Menu() {
           </TouchableOpacity>
         </View>
         
-        <Text style={{
-        fontSize: 25, 
-        fontFamily: "TitanOne-Regular",
-        marginTop: 15,
-        left: 30,
-        color: '#d4a57b',}}
+        <Text style={styles.textfontmenu}
         > Populares </Text>
 
         {/* Carrossel de imagens */}
@@ -190,9 +147,7 @@ export default function Menu() {
       {/* COFFEE HOT */}
       {/* ITEM 1 */}
         
-        <View style={{ height: 300, 
-          width: "100%", 
-          backgroundColor: "white" }} />
+        <View style={styles.viewHotCoffe} />
 
 
         <View style={{ 
@@ -1005,8 +960,8 @@ export default function Menu() {
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: 20, }}>
+        backgroundColor: 'red',
+        top: 20, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -1062,7 +1017,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -20, }}>
+        marginTop: -12, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -1209,7 +1164,7 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -90, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 5,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 8,00</Text>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>Cesta de kibes</Text>
           <Text style={{ color: "gray", marginTop: 5, }}
           >Cestinha com 3 unidades de kibes selecionados.</Text>
@@ -1263,10 +1218,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 10,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Cesta de coxinhas</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >Cestinha com 6 unidades de deliciosas coxinhas, feitas com ingredientes selecionados.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -1318,10 +1273,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Risoles</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >Deliciosos risoles de presunto e queijo com uma deliciosa massa.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -1383,9 +1338,9 @@ export default function Menu() {
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
           <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Cookies</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >3 unidades de maravilhosos cookies de baunilha com gotas de chocolate.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -1437,10 +1392,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 14,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Brownies</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >3 pedaços de deliciosos brownies de chocolate, com uma casquinha super crocante.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -1492,10 +1447,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 15,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Donuts</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >2 unidades de maravilhosos donuts fofinhos, com recheio de creme, e cobertura de chocolate branco.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
@@ -1521,7 +1476,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -20,}}>
+        marginTop: -8,}}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -1547,10 +1502,10 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 8,00</Text>
+          <Text style={{ fontSize: 20, fontWeight: "700" }}>Bolo red velvet</Text>
           <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+          >Delicioso bolo de massa red velvet com recheio de creme, e cobertura de frutas.</Text>
           
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 

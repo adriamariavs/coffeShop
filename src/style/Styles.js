@@ -178,7 +178,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#d4a57b",
   },
 
-  View1: { 
+  ViewMenu: { 
     height: 400, 
     width: "100%", 
     justifyContent: "center", 
@@ -201,6 +201,8 @@ export const styles = StyleSheet.create({
 
   TouchableMenuAdd: { 
     left: 215, 
+    marginTop: 30,
+    marginRight: 80,
     width: 40, 
     height: 40, 
     borderRadius: 10, 
@@ -221,6 +223,40 @@ export const styles = StyleSheet.create({
     position: "relative", 
     right: -40,
    },
+
+   animatedViewMenu: {
+    backgroundColor: "#d4a57b", 
+    borderBottomLeftRadius: 100 
+   },
+
+   botaocoffemenu: {
+    padding: 5, 
+    justifyContent: "center", 
+    alignItems: "center", 
+   },
+
+   textfontmenu: {
+    fontSize: 25, 
+    fontFamily: "TitanOne-Regular",
+    marginTop: 15,
+    left: 30,
+    color: '#d4a57b',
+   },
+   carrinho: { 
+    backgroundColor: "#d4a57b",
+   },
+
+   //Hot Coffee
+   viewHotCoffe: {
+    height: 300, 
+    width: "100%", 
+    backgroundColor: "white" 
+   },
+
+   viewHotCoffe2: {
+
+   },
+
   //Pagamento
   Header: {
     backgroundColor:"#d4a57b",

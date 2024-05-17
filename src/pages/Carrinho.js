@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import ButtonComponents from "../componentes/ButtonComponents";
 import TextComponent from "../componentes/TextComponent";
 import ImgComponent from "../componentes/ImgComponent";
+import { AntDesign } from '@expo/vector-icons';
 
 export default function Carrinho() {
   const navigation = useNavigation();
@@ -16,7 +17,7 @@ export default function Carrinho() {
       width: "100%", 
       justifyContent: "center", 
       alignItems: "center", 
-      backgroundColor: 'white',
+      backgroundColor: '#d4a57b',
       marginTop: -20,}}>
 
     <View style={styles.Header}>
@@ -25,6 +26,7 @@ export default function Carrinho() {
               onPress={() => navigation.navigate("Home")}
               title= "Voltar"
               />
+          
 
     </View>
     </View>

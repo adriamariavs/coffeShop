@@ -36,7 +36,7 @@ export default function App() {
           name="Carrinho"
           component={Carrinho}
           options={{
-            headerStyle: { backgroundColor: "white" },
+          headerStyle: { backgroundColor: "#d4a57b" },
           }}
         />
         <Drawer.Screen name="Login" component={Login} />
