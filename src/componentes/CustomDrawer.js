@@ -12,7 +12,6 @@ export default function CustomDrawer(props) {
           height: 85,
           alignItems: "center",
           justifyContent: "center",
-          margin: 15,
           borderBottomWidth: 1,
           borderColor: "#d4a57b",
         }}

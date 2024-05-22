@@ -12,17 +12,17 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 // Dados para o carrossel
 const data = [
   { imgUrl: require('../assets/image/coffe_carousel.png'), 
-  topImg: -60, text: "Um Capuccino intenso, e muito cremoso para te esquentar nos dias frios. ", 
+  height:30, topImg: -60, heightImg: 160, bottomimg: -10, text: "Um Capuccino intenso, e muito cremoso para te esquentar nos dias frios. ", 
   titulo:"Capuccino", preco:"R$8,00"}, 
   { imgUrl: require('../assets/image/milkCarroussel.png'), 
-  topImg: -100, text: "Um milkshake saboroso e muito cremoso, para refrescar os dias quentes. ", 
+  topImg: -100, heightImg: 180, bottomimg: -20, text: "Um milkshake saboroso e muito cremoso, para refrescar os dias quentes. ", 
   titulo: "MilkShake de morango", preco:"R$15,00" }, 
   { imgUrl: require('../assets/image/cupcakeCarroussel.png'), 
-  topImg: -70, sizeimg:0, text: "Um cupcake com a massa extremamente fofinha, e um creme de cereja. ", 
+  topImg: -70, sizeimg:0, heightImg: 160, bottomimg: -10, text: "Um cupcake com a massa extremamente fofinha, e um creme de cereja. ", 
   titulo:"Cupcake", preco:"R$12,00" }, 
-  { imgUrl: require('../assets/image/croissantCarroussel.png'), 
-  topImg: -60, sizeimg:0, text: "Um cupcake com a massa extremamente fofinha, e um creme de cereja. ", 
-  titulo:"Croissant", preco:"R$10,00" },
+  { imgUrl: require('../assets/image/croassantCarroussel.png'), 
+  topImg: -60, sizeimg:0, heightImg: 130, topimg:60, text: "Um croissant com a massa extremamente fofinha, e um recheio maravilhoso de presunto e queijo.", 
+  titulo:"Croissant", preco:"R$10,00", height: 400, width: 200},
 ];
 
 // Função para renderizar cada item do carrossel
@@ -35,10 +35,10 @@ function CarouselCardItem({ item }) {
       <View style={styles.ViewContainerMenu}>
         {/* Imagem do item */}
 <Image source={(item.imgUrl)} 
-        style={[ styles.imgsourceitem, { top: item.topImg}]} />
+        style={[ styles.imgsourceitem, { top: item.topImg, height: item.heightImg, marginBottom: item.bottomimg}]} />
         
         {/* Detalhes do item */}
-        <View style={{ width: 250, top: -140, padding: 15, marginTop: 20,}}>
+        <View style={{ width: 250, top: -140, padding: 15, marginTop: 50,}}>
           <Text style={{ fontSize: 20, fontWeight: "700", marginTop: "200"}}>{item.preco}</Text>
           <Text style={{ fontSize: 20, fontWeight: "700", marginTop: 2,}}>{item.titulo}</Text>
           <Text style={{ color: "gray", marginTop: 6, }}
@@ -89,7 +89,6 @@ export default function Menu() {
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
       {/* Contêiner de rolagem */}
       <ScrollView ref={scrollViewRef} showsVerticalScrollIndicator={false}>
-      <AntDesign name="shoppingcart" style={styles.carrinho} size={24} color="black" onPress={() => navigation.navigate("Carrinho")}/>
         
         {/* Animação de fundo */}
         <Animated.View style={[styles.animatedViewMenu, {height: heightValue}]} />
@@ -155,14 +154,14 @@ export default function Menu() {
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
-        marginTop: -240, 
+        marginTop: -220, 
         backgroundColor: 'white',}}>
 
       <Text style={{
         fontSize: 25, 
         fontFamily: "TitanOne-Regular",
-        marginBottom: 65,
-        marginTop: -60,
+        marginBottom: 60,
+        marginTop: -200,
         color: '#d4a57b',
         left: -100,}}
         > Cardápio </Text>
@@ -227,7 +226,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -30, }}>
+        marginTop: -110, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -644,12 +643,12 @@ export default function Menu() {
 
     {/* ITEM 3 */}
     <View style={{ 
-        height: 210, 
+        height: 200, 
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -15, }}>
+        marginTop: -3, }}>
 
     <Text style={{
         fontSize: 15, 
@@ -692,7 +691,7 @@ export default function Menu() {
           <TouchableOpacity style={{ 
             left: 190, 
             top: 0,
-            marginTop: 9,
+            marginTop: 4,
             width: 40, 
             height: 40, 
             borderRadius: 10, 
@@ -713,7 +712,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -10, }}>
+        marginTop: -1, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -748,7 +747,7 @@ export default function Menu() {
           <TouchableOpacity style={{ 
             left: 190, 
             top: -9,
-            marginTop: 25,
+            marginTop: 15,
             width: 40, 
             height: 40, 
             borderRadius: 10, 
@@ -769,7 +768,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -15, }}>
+        marginTop: -20, }}>
 
     <Text style={{
         fontSize: 15, 
@@ -834,7 +833,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -10, }}>
+        marginTop: -2, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -868,7 +867,7 @@ export default function Menu() {
           {/* Botão de adicionar */}
           <TouchableOpacity style={{ 
             left: 190, 
-            top: -10,
+            top: -20,
             width: 40, 
             height: 40, 
             borderRadius: 10, 
@@ -960,8 +959,8 @@ export default function Menu() {
         width: "100%", 
         justifyContent: "center", 
         alignItems: "center", 
-        backgroundColor: 'red',
-        top: 20, }}>
+        backgroundColor: 'white',
+        top: 30, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -1017,7 +1016,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -12, }}>
+        marginTop: 16, }}>
       
       {/* Container para cada item */}
       <View style={{ 
@@ -1073,7 +1072,7 @@ export default function Menu() {
         justifyContent: "center", 
         alignItems: "center", 
         backgroundColor: 'white',
-        marginTop: -20, }}>
+        marginTop: -30, }}>
       
       {/* Container para cada item */}
       <View style={{ 

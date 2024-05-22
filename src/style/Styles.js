@@ -8,161 +8,139 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  //Pag Home:
-
-  ImgLogo: {
-    height: 302,
-    width: 300,
-    marginBottom: 40,
-  },
-
-  TextHome: {
-    fontSize: 25,
-    marginTop: 75,
-  },
-
-  BtnLoginHome: {
-    alignSelf: "center",
-    marginTop: 25,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 30,
-    width: 120,
-    backgroundColor: "#755645",
-    borderRadius: 25,
-    borderBottomWidth: 1,
-    borderColor: "black",
-    margin: 7,
-  },
-
-  BtnCdsHome: {
-    alignSelf: "center",
-    marginTop: 25,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 30,
-    width: 120,
-    borderRadius: 25,
-    borderBottomWidth: 1,
-    borderColor: "black",
-    margin: 7,
-  },
-
-  BtnSaiba: {
-    alignSelf: "center",
-    marginTop: 25,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 30,
-    width: 255,
-    backgroundColor: "#d4a57b",
-    borderRadius: 25,
+  loginup: {
+    width: 100,
+    height: 100,
   },
 
   //Pag Login:
 
   BtnLogin: {
     alignSelf: "center",
-    marginTop: 25,
+    marginTop: 250,
     alignItems: "center",
     justifyContent: "center",
-    height: 30,
-    width: 200,
+    height: 40,
+    width: 250,
     backgroundColor: "#d4a57b",
-    borderRadius: 25,
+    borderRadius: 250,
     borderBottomWidth: 1,
     borderColor: "black",
-    margin: 7,
   },
 
   Welcome: {
-    fontSize: 25,
-    right: 70,
+    fontSize: 30,
+    right: 50,
     fontWeight: "bold",
-    marginBottom: 40,
-    marginTop: 15,
+    marginBottom: 10,
+    marginTop: 20,
+    textAlign: "center",
   },
+
+  Descri: {
+    fontSize: 15,
+    right: 30,
+    marginBottom: 40,
+    textAlign: "center",
+    color: "#A9A9A9",
+  },
+
+  Senha: {
+    fontSize: 13,
+    left: 87,
+    marginTop: 15,
+    color: "#A9A9A9",
+  },
+  
+  Cadas: {
+    fontSize: 15,
+    textAlign: 'center',
+    marginTop: 40,
+    color: "#A9A9A9",
+    margin: 5,
+  },
+
+  Cadas1: {
+    fontSize: 15,
+    textAlign: 'center',
+    marginTop: 40,
+    color: "#d4a57b",
+    margin: 5,
+  },
+
+  flexrow: {
+    flexDirection: "row",
+   },
 
   TelaLogin: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     paddingTop: 35,
     marginBottom: 100,
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   InputName: {
     width: 320,
-    height: 30,
+    height: 50,
     borderBottomWidth: 1,
-    borderBottomColor: "black",
-    marginTop: 10,
+    borderBottomColor: "#808080",
+    alignSelf: "center",
+    justifyContent: "center",
+  },
+
+  ImgLogin: {
+    width: 75,
+    height: 75,
+    right: 130,
   },
 
   //Pag Cadastro:
 
-  ViewCadastro: {
+  TelaCds: {
     flex: 1,
+    paddingTop: 35,
+    marginBottom: 100,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 60,
-    marginBottom: 80,
   },
 
-  TituloCds: {
-    fontSize: 25,
-    right: 80,
+  ImgCds: {
+    width: 75,
+    height: 75,
+    right: 130,
+  },
+
+  WelcomeCds: {
+    fontSize: 30,
+    right: 72,
     fontWeight: "bold",
-    marginBottom: 40,
-  },
-
-  BtnCds: {
-    alignSelf: "center",
-    marginTop: 25,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 30,
-    width: 200,
-    backgroundColor: "#d4a57b",
-    borderRadius: 25,
-    borderBottomWidth: 1,
-    borderColor: "black",
-    margin: 7,
-  },
-
-  //Pág Saiba mais
-
-  TextSaiba: {
-    fontSize: 25,
-    fontWeight: "bold",
+    marginBottom: 10,
+    marginTop: 20,
     textAlign: "center",
-    margin: 15,
   },
 
-  TextSaibaD: {
-    fontSize: 20,
-    textAlign: "left",
-    margin: 30,
+  DescriCds: {
+    fontSize: 15,
+    right: 15,
+    marginBottom: 2,
+    textAlign: "center",
+    color: "#A9A9A9",
+  },
+
+  DescriCds1: {
+    fontSize: 15,
+    right: 110,
+    marginBottom: 40,
+    textAlign: "center",
+    color: "#A9A9A9",
+  },
+
+  SenhaCds: {
+    fontSize: 13,
+    right: 110,
     marginTop: 15,
-  },
-
-  ImgSobreNós: {
-    alignItems: "center",
-    justifyContent: "center",
-    height: 10,
-    width: 10,
-  },
-
-  BtnSaibaPG: {
-    alignSelf: "center",
-    marginTop: 15,
-    marginBottom: 30,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 40,
-    width: 255,
-    backgroundColor: "#d4a57b",
-    borderRadius: 25,
+    color: "#d4a57b",
   },
 
   //Página Menu
@@ -174,93 +152,94 @@ export const styles = StyleSheet.create({
   },
 
   header: {
-    height: 120,
+    height: 110,
     backgroundColor: "#d4a57b",
   },
 
-  ViewMenu: { 
-    height: 400, 
-    width: "100%", 
-    justifyContent: "center", 
-    alignItems: "center", 
-    marginTop: 30 
+  ViewMenu: {
+    height: 400,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   ViewContainerMenu: {
-    width: 250, 
-    height: 250, 
-    alignItems: "flex-end", 
-    shadowColor: "#000", 
-    shadowOffset: { width: 0, height: 5 }, 
-    shadowOpacity: 0.5, 
-    shadowRadius: 10, 
-    elevation: 5, 
-    borderRadius: 20, 
-    backgroundColor: "white" 
+    width: 250,
+    height: 250,
+    alignItems: "flex-end",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+    borderRadius: 20,
+    backgroundColor: "white",
   },
 
-  TouchableMenuAdd: { 
-    left: 215, 
+  TouchableMenuAdd: {
+    left: 215,
     marginTop: 30,
     marginRight: 80,
-    width: 40, 
-    height: 40, 
-    borderRadius: 10, 
-    backgroundColor: "#d4a57b", 
-    justifyContent: "center", 
-    alignItems: "center" 
+    width: 40,
+    height: 40,
+    borderRadius: 10,
+    backgroundColor: "#d4a57b",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  navbar: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#6200ea',
-    paddingVertical: 10,
+
+  imgsourceitem: {
+    width: 130,
+    height: 165,
+    position: "relative",
+    right: 10,
   },
-  
-   imgsourceitem: {
-    width: 140, 
-    height: 190, 
-    position: "relative", 
-    right: -40,
-   },
 
-   animatedViewMenu: {
-    backgroundColor: "#d4a57b", 
-    borderBottomLeftRadius: 100 
-   },
+  animatedViewMenu: {
+    backgroundColor: "#d4a57b",
+    borderBottomLeftRadius: 100,
+  },
 
-   botaocoffemenu: {
-    padding: 5, 
-    justifyContent: "center", 
-    alignItems: "center", 
-   },
+  botaocoffemenu: {
+    padding: 5,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-   textfontmenu: {
-    fontSize: 25, 
+  textfontmenu: {
+    fontSize: 25,
     fontFamily: "TitanOne-Regular",
     marginTop: 15,
     left: 30,
-    color: '#d4a57b',
-   },
-   carrinho: { 
+    color: "#d4a57b",
+    marginBottom: 50,
+  },
+
+  //Hot Coffee
+  viewHotCoffe: {
+    height: 300,
+    width: "100%",
+    backgroundColor: "white",
+  },
+
+  viewHotCoffe2: {},
+
+  // Pág Carrinho
+  Btncomprar: {
+    alignSelf: "center",
+    top: 700,
+    marginLeft: 92,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 43,
+    width: 130,
     backgroundColor: "#d4a57b",
-   },
+    borderRadius: 25,
+    borderBottomWidth: 1,
+    borderColor: "black",
+    backgroundColor: "white",
+  },
+  
 
-   //Hot Coffee
-   viewHotCoffe: {
-    height: 300, 
-    width: "100%", 
-    backgroundColor: "white" 
-   },
-
-   viewHotCoffe2: {
-
-   },
-
-  //Pagamento
-  Header: {
-    backgroundColor:"#d4a57b",
-    height:120,
-  }
-
+  // Pág Sobre
 });
