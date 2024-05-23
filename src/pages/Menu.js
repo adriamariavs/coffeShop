@@ -12,16 +12,20 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 // Dados para o carrossel
 const data = [
   { imgUrl: require('../assets/image/coffe_carousel.png'), 
-  height:30, topImg: -60, heightImg: 160, bottomimg: -10, text: "Um Capuccino intenso, e muito cremoso para te esquentar nos dias frios. ", 
+  height:30, topImg: -60, heightImg: 160, bottomimg: -10, 
+  text: "Um Capuccino intenso, e muito cremoso para te esquentar nos dias frios. ", 
   titulo:"Capuccino", preco:"R$8,00"}, 
   { imgUrl: require('../assets/image/milkCarroussel.png'), 
-  topImg: -100, heightImg: 180, bottomimg: -20, text: "Um milkshake saboroso e muito cremoso, para refrescar os dias quentes. ", 
+  topImg: -100, heightImg: 180, bottomimg: -20, 
+  text: "Um milkshake saboroso e muito cremoso, para refrescar os dias quentes. ", 
   titulo: "MilkShake de morango", preco:"R$15,00" }, 
   { imgUrl: require('../assets/image/cupcakeCarroussel.png'), 
-  topImg: -70, sizeimg:0, heightImg: 160, bottomimg: -10, text: "Um cupcake com a massa extremamente fofinha, e um creme de cereja. ", 
+  topImg: -70, sizeimg:0, heightImg: 160, bottomimg: -10, 
+  text: "Um cupcake com a massa extremamente fofinha, e um creme de cereja. ", 
   titulo:"Cupcake", preco:"R$12,00" }, 
   { imgUrl: require('../assets/image/croassantCarroussel.png'), 
-  topImg: -60, sizeimg:0, heightImg: 130, topimg:60, text: "Um croissant com a massa extremamente fofinha, e um recheio maravilhoso de presunto e queijo.", 
+  topImg: -60, sizeimg:0, heightImg: 130, topimg:60, 
+  text: "Um croissant com a massa extremamente fofinha, e um recheio maravilhoso de presunto e queijo.", 
   titulo:"Croissant", preco:"R$10,00", height: 400, width: 200},
 ];
 
@@ -147,80 +151,38 @@ export default function Menu() {
       {/* ITEM 1 */}
         
         <View style={styles.viewHotCoffe} />
+        <View style={styles.viewHotCoffe1}>
 
-
-        <View style={{ 
-        height: 308, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        marginTop: -220, 
-        backgroundColor: 'white',}}>
-
-      <Text style={{
-        fontSize: 25, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 60,
-        marginTop: -200,
-        color: '#d4a57b',
-        left: -100,}}
+        <Text style={styles.TextoCardapio}
         > Cardápio </Text>
-
-      <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        left: -140,
-        color: '#d4a57b',}}
+        <Text style={styles.TextoCafes}
         > Cafés </Text>
       
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+        {/* Container para cada item */}
+        <View style={styles.Item1}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/coffeHot1.png")} 
-        style={{ width: 120, 
-        height: 120, 
-        position: "relative", 
-        top: 10, 
-        right: 240, }} />
+        style={styles.ImgHot1} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -120, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 5,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
-          <Text style={{ color: "gray", marginTop: 5, }}
-          >Um sabor intenso e inesquecivel.</Text>
+        <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 5,00</Text>
+        <Text style={{ fontSize: 20, fontWeight: "700" }}>Café expresso</Text>
+        <Text style={{ color: "gray", marginTop: 5, }}
+        >Um sabor intenso e inesquecivel.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
+        {/* Botão de adicionar */}
+        <TouchableOpacity style={styles.BtnHot1}>
+        <AntDesign color="white" size={25} name="plus" />
+        </TouchableOpacity>
         </View>
-      </View>
-    </View>
+        </View>
+        </View>
 
-   {/* ITEM 2 */}
+      {/* ITEM 2 */}
 
-    <View style={{ 
+        <View style={{ 
         height: 220, 
         width: "100%", 
         justifyContent: "center", 
@@ -228,8 +190,8 @@ export default function Menu() {
         backgroundColor: 'white',
         marginTop: -110, }}>
       
-      {/* Container para cada item */}
-      <View style={{ 
+        {/* Container para cada item */}
+        <View style={{ 
         width: 340, 
         height: 130, 
         alignItems: "flex-end", 
@@ -252,13 +214,13 @@ export default function Menu() {
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -120, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Café com leite</Text>
-          <Text style={{ color: "gray" }}
-          >Cremoso, reconfortante e cheio de sabor.</Text>
+        <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+        <Text style={{ fontSize: 20, fontWeight: "700" }}>Café com leite</Text>
+        <Text style={{ color: "gray" }}
+        >Cremoso, reconfortante e cheio de sabor.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
+        {/* Botão de adicionar */}
+        <TouchableOpacity style={{ 
             left: 190, 
             top: 15,
             width: 40, 
@@ -267,11 +229,11 @@ export default function Menu() {
             backgroundColor: "#d4a57b", 
             justifyContent: "center", 
             alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
+        <AntDesign color="white" size={25} name="plus" />
+        </TouchableOpacity>
         </View>
-      </View>
-    </View>
+        </View>
+        </View>
 
     {/* ITEM 3 */}
 

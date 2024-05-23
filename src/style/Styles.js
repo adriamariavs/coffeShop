@@ -215,15 +215,6 @@ export const styles = StyleSheet.create({
     marginBottom: 50,
   },
 
-  //Hot Coffee
-  viewHotCoffe: {
-    height: 300,
-    width: "100%",
-    backgroundColor: "white",
-  },
-
-  viewHotCoffe2: {},
-
   // Pág Carrinho
   Btncomprar: {
     alignSelf: "center",
@@ -242,4 +233,73 @@ export const styles = StyleSheet.create({
   
 
   // Pág Sobre
+
+  // CARDAPIO Hot Coffee -- item 1
+  viewHotCoffe: {
+    height: 300,
+    width: "100%",
+    backgroundColor: "white",
+  },
+
+  viewHotCoffe1: { 
+    height: 308, 
+    width: "100%", 
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: -220, 
+    backgroundColor: 'white'
+  },
+
+  TextoCardapio: {
+    fontSize: 25, 
+    fontFamily: "TitanOne-Regular",
+    marginBottom: 60,
+    marginTop: -200,
+    color: '#d4a57b',
+    left: -100
+  },
+
+  TextoCafes: {
+    fontSize: 15, 
+    fontFamily: "TitanOne-Regular",
+    marginBottom: 10,
+    left: -140,
+    color: '#d4a57b'
+  },
+
+  Item1: { 
+    width: 340, 
+    height: 130, 
+    alignItems: "flex-end", 
+    shadowColor: "#000", 
+    shadowOffset: { width: 0, height: 5 }, 
+    shadowOpacity: 0.5, 
+    shadowRadius: 10, 
+    elevation: 5, 
+    borderRadius: 20, 
+    backgroundColor: "white" 
+  },
+
+  ImgHot1: { width: 120, 
+    height: 120, 
+    position: "relative", 
+    top: 10, 
+    right: 240, 
+  },
+
+  BtnHot1: { 
+    left: 190, 
+    top: 15,
+    width: 40, 
+    height: 40, 
+    borderRadius: 10, 
+    backgroundColor: "#d4a57b", 
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+
+  // CARDAPIO Hot Coffee -- item 2
+
+  
+
 });
