@@ -103,7 +103,7 @@ export default function Menu() {
         alignItems: "center", 
         justifyContent: "space-around" }}>
           
-          {/* Botão Hot Coffee */}
+          {/* Botão que desce a View até "Cafés Quentes" */}
           <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasQuentes" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(650); setSelectedButton("bebidasQuentes")}}>
             <Text style={{ color: selectedButton === "bebidasQuentes" ? "#d4a57b" : "black" }}
@@ -112,7 +112,7 @@ export default function Menu() {
             borderColor: "#d4a57b", width: 50 }} />
           </TouchableOpacity>
           
-          {/* Botão Cold Coffee */}
+          {/* Botão que desce a View até "Café Gelado" */}
           <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasGeladas" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(1950); setSelectedButton("bebidasGeladas")}}>
             <Text style={{ color: selectedButton === "bebidasGeladas" ? "#d4a57b" : "black" }}
@@ -121,7 +121,7 @@ export default function Menu() {
             borderColor: "#d4a57b", width: 50 }} />
           </TouchableOpacity>
          
-          {/* Botão Cookies */}
+          {/* Botão que desce a View até "Comida" */}
           <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "comidas" ? "white" : "white" }]} 
             onPress={() => {scrollToSection(3210); setSelectedButton("comidas")}}>
             <Text style={{ color: selectedButton === "comidas" ? "#d4a57b" : "black" }}
@@ -150,8 +150,8 @@ export default function Menu() {
       {/* COFFEE HOT */}
       {/* ITEM 1 */}
         
-        <View style={styles.viewHotCoffe} />
-        <View style={styles.viewHotCoffe1}>
+        <View style={styles.viewHotCoffe1} />
+        <View style={styles.viewHotCoffe2}>
 
         <Text style={styles.TextoCardapio}
         > Cardápio </Text>
@@ -182,35 +182,13 @@ export default function Menu() {
 
       {/* ITEM 2 */}
 
-        <View style={{ 
-        height: 220, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -110, }}>
-      
+        <View style={styles.viewHotCoffe3}>
         {/* Container para cada item */}
-        <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+        <View style={styles.viewHotCoffe4}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/coffeeHot2.png")} 
-        style={{ 
-        width: 120, 
-        height: 120, 
-        position: "relative", 
-        top: 0, 
-        right: 240, }} />
+        style={styles.ImgHot2} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -120, padding: 15 }}>
@@ -220,15 +198,7 @@ export default function Menu() {
         >Cremoso, reconfortante e cheio de sabor.</Text>
           
         {/* Botão de adicionar */}
-        <TouchableOpacity style={{ 
-            left: 190, 
-            top: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+        <TouchableOpacity style={styles.BtnHot2}>
         <AntDesign color="white" size={25} name="plus" />
         </TouchableOpacity>
         </View>
@@ -237,530 +207,233 @@ export default function Menu() {
 
     {/* ITEM 3 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -15, }}>
-
-    <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        left: -140,
-        color: '#d4a57b',}}
-        > Chás </Text>
+    <View style={styles.viewHotCoffe5}>
+    <Text style={styles.TextoChas}
+    >Chás </Text>
       
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+    {/* Container para cada item */}
+    <View style={styles.viewHotCoffe6}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coffeeHot3.png")} 
-        style={{ 
-        width: 110, 
-        height: 100, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+    {/* Imagem do item */}
+    <Image source={require("../assets/image/coffeeHot3.png")} 
+    style={styles.ImgHot3} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -110, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de hortelã</Text>
-          <Text style={{ color: "gray" }}
-          >Refresque seu dia com nosso chá quente de hortelã e limão</Text>
+    {/* Detalhes do item */}
+    <View style={{ width: 240, top: -110, padding: 15 }}>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de hortelã</Text>
+    <Text style={{ color: "gray" }}
+    >Refresque seu dia com nosso chá quente de hortelã e limão</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
+    {/* Botão de adicionar */}
+    <TouchableOpacity style={styles.BtnHot3}>
+      <AntDesign color="white" size={25} name="plus" />
+      </TouchableOpacity>
       </View>
-    </View>
+      </View>
+      </View>
 
     {/* ITEM 4 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -2, }}>
-      
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+    <View style={styles.viewHotCoffe7}>  
+    {/* Container para cada item */}
+    <View style={styles.viewHotCoffe8}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coffeeHot4.png")} 
-        style={{ 
-        width: 110, 
-        height: 100, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+    {/* Imagem do item */}
+    <Image source={require("../assets/image/coffeeHot4.png")} 
+    style={styles.ImgHot4} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -110, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de gengibre</Text>
-          <Text style={{ color: "gray" }}
-          >Explosão de sabor que aquece o corpo e acalma a alma.</Text>
+    {/* Detalhes do item */}
+    <View style={{ width: 240, top: -110, padding: 15 }}>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 6,00</Text>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>Chá de gengibre</Text>
+    <Text style={{ color: "gray" }}
+    >Explosão de sabor que aquece o corpo e acalma a alma.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 20,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
+    {/* Botão de adicionar */}
+    <TouchableOpacity style={styles.BtnHot4}>
+    <AntDesign color="white" size={25} name="plus" />
+    </TouchableOpacity>
+    </View>
+    </View>
     </View>
 
 {/* ITEM 5 */}
 
-<View style={{ 
-  height: 190, 
-  width: "100%", 
-  justifyContent: "center", 
-  alignItems: "center", 
-  backgroundColor: 'white',
-  marginTop: -15, }}>
-
-<Text style={{
-  fontSize: 15, 
-  fontFamily: "TitanOne-Regular",
-  marginBottom: 10,
-  left: -120,
-  color: '#d4a57b',}}
-  > Chocolates </Text>
+<View style={styles.viewHotCoffe9}>
+<Text style={styles.TextoChocolates}
+> Chocolates </Text>
 
 {/* Container para cada item */}
-<View style={{ 
-  width: 340, 
-  height: 130, 
-  alignItems: "flex-end", 
-  shadowColor: "#000", 
-  shadowOffset: { width: 0, height: 5 }, 
-  shadowOpacity: 0.5, 
-  shadowRadius: 10, 
-  elevation: 5, 
-  borderRadius: 20, 
-  backgroundColor: "white" }}>
+<View style={styles.viewHotCoffe10}>
  
-  {/* Imagem do item */}
-  <Image source={require("../assets/image/coffeeHot5.png")} 
-  style={{ 
-  width: 120, 
-  height: 145, 
-  position: "relative", 
-  top: -25, 
-  right: 240, }} />
+{/* Imagem do item */}
+<Image source={require("../assets/image/coffeeHot5.png")} 
+style={styles.ImgHot5} />
   
-  {/* Detalhes do item */}
-  <View style={{ width: 240, top: -152, padding: 15 }}>
-    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-    <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate misto</Text>
-    <Text style={{ color: "gray", marginTop: 5, }}
-    > Quente, cremoso e delicioso.</Text>
+{/* Detalhes do item */}
+<View style={{ width: 240, top: -152, padding: 15 }}>
+<Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
+<Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate misto</Text>
+<Text style={{ color: "gray", marginTop: 5, }}
+> Quente, cremoso e delicioso.</Text>
     
-    {/* Botão de adicionar */}
-    <TouchableOpacity style={{ 
-      left: 190, 
-      top: 15,
-      width: 40, 
-      height: 40, 
-      borderRadius: 10, 
-      backgroundColor: "#d4a57b", 
-      justifyContent: "center", 
-      alignItems: "center" }}>
-      <AntDesign color="white" size={25} name="plus" />
-    </TouchableOpacity>
-  </View>
+{/* Botão de adicionar */}
+<TouchableOpacity style={styles.BtnHot5}>
+<AntDesign color="white" size={25} name="plus" />
+</TouchableOpacity>
+</View>
 </View>
 </View>
 
 {/* ITEM 6 */}
 
-<View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: 10, }}>
-      
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+<View style={styles.viewHotCoffe11}>
+{/* Container para cada item */}
+<View style={styles.viewHotCoffe12}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coffeeHot6.png")} 
-        style={{ 
-        width: 100, 
-        height: 140, 
-        position: "relative", 
-        top: -20, 
-        right: 245, }} />
+{/* Imagem do item */}
+<Image source={require("../assets/image/coffeeHot6.png")} 
+style={styles.ImgHot6} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -152, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
-          <Text style={{ color: "gray" }}
-          >Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
+{/* Detalhes do item */}
+<View style={{ width: 240, top: -152, padding: 15 }}>
+<Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 12,00</Text>
+<Text style={{ fontSize: 20, fontWeight: "700" }}>Chocolate quente</Text>
+<Text style={{ color: "gray" }}
+>Experimente o nosso delicioso chocolate quente, aconchego em cada gole.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>  
+{/* Botão de adicionar */}
+<TouchableOpacity style={styles.BtnHot6}>
+<AntDesign color="white" size={25} name="plus" />
+</TouchableOpacity>
+</View>
+</View>
+</View>  
 
+  {/* COLD COFFEE */}
 
+  <View style={styles.viewColdCoffe1}>
 
-    {/* COLD COFFEE */}
-
-    <View style={{ 
-  height: 300, 
-  width: "100%", 
-  justifyContent: "center", 
-  alignItems: "center", 
-  backgroundColor: 'white',
-  marginBottom: -30,
-  marginTop: -15,}}>
-
-    <Text style={{
-        fontSize: 25, 
-        fontFamily: "TitanOne-Regular",
-        color: '#d4a57b',
-        left: -80,}}
-        > Cold Coffee </Text>
-
-      <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        marginTop: 50,
-        left: -100,
-        color: '#d4a57b',}}
-        > Cafés Gelados </Text>
+  <Text style={styles.TextoColdCoffee}
+  > Cold Coffee </Text>
+  <Text style={styles.TextoCafeGelado}
+  > Cafés Gelados </Text>
       
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+  {/* Container para cada item */}
+  <View style={styles.viewColdCoffe2}>
           
-       
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coldCoffee1.png")} 
-        style={{ width: 70, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 250, }} />
+  {/* Imagem do item */}
+  <Image source={require("../assets/image/coldCoffee1.png")} 
+  style={styles.ImgCold1} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -120, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Iced latte</Text>
-          <Text style={{ color: "gray", marginTop: 5, }}
-          >Café com leite cremoso, e algumas pedras de gelo.</Text>
+  {/* Detalhes do item */}
+  <View style={{ width: 240, top: -120, padding: 15 }}>
+  <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
+  <Text style={{ fontSize: 20, fontWeight: "700" }}>Iced latte</Text>
+  <Text style={{ color: "gray", marginTop: 5, }}
+  >Café com leite cremoso, e algumas pedras de gelo.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 0,
-            width: 40, 
-            marginTop: 10,
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
-      </View>
+  {/* Botão de adicionar */}
+  <TouchableOpacity style={styles.BtnCold2}>
+  <AntDesign color="white" size={25} name="plus" />
+  </TouchableOpacity>
+  </View>
+  </View>
+  </View>
 
-    {/* ITEM 2 */}
+  {/* ITEM 2 */}
 
-      <View style={{ 
-        height: 190, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: 35, }}>
-      
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+  <View style={styles.viewColdCoffe3}>   
+  {/* Container para cada item */}
+  <View style={styles.viewColdCoffe4}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coldCoffee2.png")} 
-        style={{ 
-        width: 100, 
-        height: 140, 
-        position: "relative", 
-        top: -10, 
-        right: 245, }} />
+  {/* Imagem do item */}
+  <Image source={require("../assets/image/coldCoffee2.png")} 
+  style={styles.ImgCold2} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -152, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700"}}>R$ 10,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Afogatto</Text>
-          <Text style={{ color: "gray" }}
-          >Café com sorvete cremosíssimo de baunilha.</Text>
+  {/* Detalhes do item */}
+  <View style={{ width: 240, top: -152, padding: 15 }}>
+  <Text style={{ fontSize: 20, fontWeight: "700"}}>R$ 10,00</Text>
+  <Text style={{ fontSize: 20, fontWeight: "700" }}>Afogatto</Text>
+  <Text style={{ color: "gray" }}
+  >Café com sorvete cremosíssimo de baunilha.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 12,
-            marginTop: 9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>  
+  {/* Botão de adicionar */}
+  <TouchableOpacity style={styles.BtnCold2}>
+  <AntDesign color="white" size={25} name="plus" />
+  </TouchableOpacity>
+  </View>
+  </View>
+  </View>  
 
 
     {/* ITEM 3 */}
-    <View style={{ 
-        height: 200, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -3, }}>
+    <View style={styles.viewColdCoffe5}>
 
-    <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        left: -110,
-        color: '#d4a57b',}}
-        > Chás Gelados</Text>
+    <Text style={styles.TextoChasGelados}
+    > Chás Gelados</Text>
       
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+    {/* Container para cada item */}
+    <View style={styles.viewColdCoffe6}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coldCoffee3.png")} 
-        style={{ 
-        width: 120, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+    {/* Imagem do item */}
+    <Image source={require("../assets/image/coldCoffee3.png")} 
+    style={styles.ImgCold3} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -120, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Early grey</Text>
-          <Text style={{ color: "gray" }}
-          >MIsura de chás pretos com essência de bergamota.</Text>
+    {/* Detalhes do item */}
+    <View style={{ width: 240, top: -120, padding: 15 }}>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>Early grey</Text>
+    <Text style={{ color: "gray" }}
+    >MIsura de chás pretos com essência de bergamota.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 0,
-            marginTop: 4,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
+    {/* Botão de adicionar */}
+    <TouchableOpacity style={styles.BtnCold3}>
+    <AntDesign color="white" size={25} name="plus" />
+    </TouchableOpacity>
+    </View>
+    </View>
     </View>
 
     {/* ITEM 4 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -1, }}>
-      
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+    <View style={styles.viewColdCoffe7}>
+    {/* Container para cada item */}
+    <View style={styles.viewColdCoffe8}>
        
-        {/* Imagem do item */}
-        <Image source={require("../assets/image/coldCoffee4.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 245, }} />
+    {/* Imagem do item */}
+    <Image source={require("../assets/image/coldCoffee4.png")} 
+    style={styles.ImgCold4} />
         
-        {/* Detalhes do item */}
-        <View style={{ width: 240, top: -125, padding: 15 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Teavana</Text>
-          <Text style={{ color: "gray" }}
-          >Mistura de hibiscus gelados com limonada.</Text>
+    {/* Detalhes do item */}
+    <View style={{ width: 240, top: -125, padding: 15 }}>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>R$ 7,00</Text>
+    <Text style={{ fontSize: 20, fontWeight: "700" }}>Teavana</Text>
+    <Text style={{ color: "gray" }}
+    >Mistura de hibiscus gelados com limonada.</Text>
           
-          {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            marginTop: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
-            <AntDesign color="white" size={25} name="plus" />
-          </TouchableOpacity>
-        </View>
-      </View>
+    {/* Botão de adicionar */}
+    <TouchableOpacity style={styles.BtnCold4}>
+    <AntDesign color="white" size={25} name="plus" />
+    </TouchableOpacity>
+    </View>
+    </View>
     </View>  
 
    {/* ITEM 5 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -20, }}>
+    <View style={styles.viewColdCoffe9}>
 
-    <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        left: -110,
-        color: '#d4a57b',}}
-        > Milk Shakes</Text>
+    <Text style={styles.TextoMilkShakes}
+    > Milk Shakes</Text>
       
-      {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+    {/* Container para cada item */}
+    <View style={styles.viewColdCoffe10}>
        
-        {/* Imagem do item */}
+    {/* Imagem do item */}
         <Image source={require("../assets/image/coldCoffee5.png")} 
-        style={{ 
-        width: 85, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 250, }} />
+        style={styles.ImgCold5} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -120, padding: 15 }}>
@@ -770,16 +443,7 @@ export default function Menu() {
           >Sorvete de baunilha batido com leite, com um toque de chantilly.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190,
-            marginTop: 9, 
-            top: 0,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnCold5}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -789,35 +453,14 @@ export default function Menu() {
 
     {/* ITEM 6 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -2, }}>
+    <View style={styles.viewColdCoffe11}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewColdCoffe12}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/coldCoffee6.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 245, }} />
+        style={styles.ImgCold6} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -135, padding: 15 }}>
@@ -827,15 +470,7 @@ export default function Menu() {
           >Sorvete cremosíssimo de chocolate batido com leite, e biscoitos.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -20,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnCold6}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -844,52 +479,20 @@ export default function Menu() {
 
   {/* COMIDAS - ITEM 1 */}
 
-    <View style={{ 
-  height: 300, 
-  width: "100%", 
-  justifyContent: "center", 
-  alignItems: "center", 
-  backgroundColor: 'white',
-  marginBottom: -30,
-  marginTop: -15,}}>
+    <View style={styles.viewComidasP1}>
 
-    <Text style={{
-        fontSize: 25, 
-        fontFamily: "TitanOne-Regular",
-        color: '#d4a57b',
-        left: -100,}}
-        > Comidas </Text>
-
-      <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        marginTop: 50,
-        left: -135,
-        color: '#d4a57b',}}
-        > Pães </Text>
+    <Text style={styles.TextoComidas}
+    > Comidas </Text>
+    <Text style={styles.TextoPaes}
+    > Pães </Text>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasP2}>
           
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/comida1.png")} 
-        style={{ width: 80, 
-        height: 90, 
-        position: "relative", 
-        top: 20, 
-        right: 250, }} />
+        style={styles.ImgPaes1} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -90, padding: 15 }}>
@@ -899,15 +502,7 @@ export default function Menu() {
           >Pão quentinho francês, com ingredientes selecionados.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 10,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnPaes1}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -916,35 +511,14 @@ export default function Menu() {
 
       {/* ITEM 2 */}
 
-      <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        top: 30, }}>
+      <View style={styles.viewComidasP3}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasP4}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/comida2.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgPaes2} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -954,15 +528,7 @@ export default function Menu() {
           >Cesta com 8 pães de queijo quentinhos e macios.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnPaes2}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -972,35 +538,14 @@ export default function Menu() {
 
     {/* ITEM 3 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: 16, }}>
+    <View style={styles.viewComidasP5}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasP6}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/comida3.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgPaes3} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -1010,15 +555,7 @@ export default function Menu() {
           >Pão com fatias de presunto e queijo, e uma base de maionese.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -3,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnPaes3}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1028,35 +565,14 @@ export default function Menu() {
 
     {/* ITEM 4 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -30, }}>
+    <View style={styles.viewComidasP7}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasP8}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/comida4.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgPaes4} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -1066,15 +582,7 @@ export default function Menu() {
           >Pão com fatias de presunto, queijo, alface, e tomate.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: 15,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnPaes4}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1083,45 +591,18 @@ export default function Menu() {
     
      {/* salgados - ITEM 1 */}
 
-     <View style={{ 
-  height: 300, 
-  width: "100%", 
-  justifyContent: "center", 
-  alignItems: "center", 
-  backgroundColor: 'white',
-  marginBottom: -100,
-  marginTop: -10,}}>
+     <View style={styles.viewComidasS1}>
 
-      <Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        marginTop: -115,
-        left: -120,
-        color: '#d4a57b',}}
+      <Text style={styles.TextoSalgado}
         > Salgados </Text>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasS2}>
           
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/salgado1.png")} 
-        style={{ width: 100, 
-        height: 100, 
-        position: "relative", 
-        top: 20, 
-        right: 240, }} />
+        style={styles.ImgSalgado1} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -90, padding: 15 }}>
@@ -1131,15 +612,7 @@ export default function Menu() {
           >Cestinha com 3 unidades de kibes selecionados.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -3,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnSalgado1}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1148,34 +621,14 @@ export default function Menu() {
 
     {/* ITEM 2 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',}}>
+    <View style={styles.viewComidasS3}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasS4}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/salgado2.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgSalgado2} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -1185,15 +638,7 @@ export default function Menu() {
           >Cestinha com 6 unidades de deliciosas coxinhas, feitas com ingredientes selecionados.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnSalgado2}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1202,35 +647,14 @@ export default function Menu() {
     
     {/* ITEM 3 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -20,}}>
+    <View style={styles.viewComidasS5}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasS6}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/salgado3.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgSalgado3} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -1240,15 +664,7 @@ export default function Menu() {
           >Deliciosos risoles de presunto e queijo com uma deliciosa massa.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnSalgado3}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1257,44 +673,17 @@ export default function Menu() {
 
      {/* DOCES - ITEM 1 */}
 
-     <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: 50,}}>
+     <View style={styles.viewComidasD1}>
 
-<Text style={{
-        fontSize: 15, 
-        fontFamily: "TitanOne-Regular",
-        marginBottom: 10,
-        marginTop: -115,
-        left: -120,
-        color: '#d4a57b',}}
+<Text style={styles.TextoDoces}
         > Doces </Text>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasD2}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/doce1.png")} 
-        style={{ 
-        width: 110, 
-        height: 90, 
-        position: "relative", 
-        top: 20, 
-        right: 230, }} />
+        style={styles.ImgDoce1} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
@@ -1304,15 +693,7 @@ export default function Menu() {
           >3 unidades de maravilhosos cookies de baunilha com gotas de chocolate.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnDoce1}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1321,35 +702,14 @@ export default function Menu() {
 
      {/* ITEM 2 */}
 
-     <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -70,}}>
+     <View style={styles.viewComidasD3}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasD4}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/doce2.png")} 
-        style={{ 
-        width: 100, 
-        height: 120, 
-        position: "relative", 
-        top: 5, 
-        right: 240, }} />
+        style={styles.ImgDoce2} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -125, padding: 15 }}>
@@ -1359,15 +719,7 @@ export default function Menu() {
           >3 pedaços de deliciosos brownies de chocolate, com uma casquinha super crocante.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnDoce2}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1376,35 +728,14 @@ export default function Menu() {
 
     {/* ITEM 3 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -20,}}>
+    <View style={styles.viewComidasD5}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasD6}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/doces3.png")} 
-        style={{ 
-        width: 100, 
-        height: 90, 
-        position: "relative", 
-        top: 15, 
-        right: 240, }} />
+        style={styles.ImgDoce3} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
@@ -1414,15 +745,7 @@ export default function Menu() {
           >2 unidades de maravilhosos donuts fofinhos, com recheio de creme, e cobertura de chocolate branco.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnDoce3}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
@@ -1431,35 +754,14 @@ export default function Menu() {
     
     {/* ITEM 4 */}
 
-    <View style={{ 
-        height: 210, 
-        width: "100%", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        backgroundColor: 'white',
-        marginTop: -8,}}>
+    <View style={styles.viewComidasD7}>
       
       {/* Container para cada item */}
-      <View style={{ 
-        width: 340, 
-        height: 130, 
-        alignItems: "flex-end", 
-        shadowColor: "#000", 
-        shadowOffset: { width: 0, height: 5 }, 
-        shadowOpacity: 0.5, 
-        shadowRadius: 10, 
-        elevation: 5, 
-        borderRadius: 20, 
-        backgroundColor: "white" }}>
+      <View style={styles.viewComidasD8}>
        
         {/* Imagem do item */}
         <Image source={require("../assets/image/doces4.png")} 
-        style={{ 
-        width: 100, 
-        height: 90, 
-        position: "relative", 
-        top: 15, 
-        right: 240, }} />
+        style={styles.ImgDoce4} />
         
         {/* Detalhes do item */}
         <View style={{ width: 240, top: -100, padding: 15 }}>
@@ -1469,15 +771,7 @@ export default function Menu() {
           >Delicioso bolo de massa red velvet com recheio de creme, e cobertura de frutas.</Text>
           
           {/* Botão de adicionar */}
-          <TouchableOpacity style={{ 
-            left: 190, 
-            top: -9,
-            width: 40, 
-            height: 40, 
-            borderRadius: 10, 
-            backgroundColor: "#d4a57b", 
-            justifyContent: "center", 
-            alignItems: "center" }}>
+          <TouchableOpacity style={styles.BtnDoce4}>
             <AntDesign color="white" size={25} name="plus" />
           </TouchableOpacity>
         </View>
