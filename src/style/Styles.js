@@ -1337,8 +1337,6 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   containermodal: {
-  flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
+    flex: 1,
   },
 });
