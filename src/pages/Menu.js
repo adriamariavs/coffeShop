@@ -104,29 +104,46 @@ export default function Menu() {
         justifyContent: "space-around" }}>
           
           {/* Botão que desce a View até "Cafés Quentes" */}
-          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasQuentes" ? "white" : "white" }]} 
-            onPress={() => {scrollToSection(650); setSelectedButton("bebidasQuentes")}}>
-            <Text style={{ color: selectedButton === "bebidasQuentes" ? "#d4a57b" : "black" }}
+          <TouchableOpacity 
+            // Define o estilo do botão usando 'styles.botaocoffemenu'. A cor de fundo é branca, independentemente do estado.
+            style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasQuentes" ? "white" : "white" }]} 
+            // Função a ser executada quando o botão é pressionado
+            onPress={() =>
+            // Rola a tela até a posição 650 pixels na vertical e seleciona o botão ativo                
+            {scrollToSection(650); setSelectedButton("bebidasQuentes")}}>     
+            {/* Texto do botão */}
+            <Text style={{ color: selectedButton === "bebidasQuentes" ? "#d4a57b" : "black" }} // Se 'selectedButton' for "bebidasQuentes", a cor será '#d4a57b', caso contrário, será 'black'
             >Bebidas quentes</Text>
-            <View style={{ borderBottomWidth: selectedButton === "bebidasQuentes" ? 2 : 0, 
+            <View style={{ borderBottomWidth: selectedButton === "bebidasQuentes" ? 2 : 0, // Se 'selectedButton' for "bebidasQuentes", a largura da borda inferior será 2, caso contrário, será 0.
             borderColor: "#d4a57b", width: 50 }} />
           </TouchableOpacity>
           
           {/* Botão que desce a View até "Café Gelado" */}
-          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasGeladas" ? "white" : "white" }]} 
-            onPress={() => {scrollToSection(1950); setSelectedButton("bebidasGeladas")}}>
-            <Text style={{ color: selectedButton === "bebidasGeladas" ? "#d4a57b" : "black" }}
+          <TouchableOpacity 
+            // Define o estilo do botão usando 'styles.botaocoffemenu'. A cor de fundo é branca, independentemente do estado.
+            style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "bebidasGeladas" ? "white" : "white" }]} 
+            // Função a ser executada quando o botão é pressionado
+            onPress={() => 
+            // Rola a tela até a posição 650 pixels na vertical e seleciona o botão ativo                
+            {scrollToSection(1950); setSelectedButton("bebidasGeladas")}}>
+            {/* Texto do botão */}
+            <Text style={{ color: selectedButton === "bebidasGeladas" ? "#d4a57b" : "black" }} // Se 'selectedButton' for "bebidasGeladas", a cor será '#d4a57b', caso contrário, será 'black'
             >Bebidas Geladas</Text>
-            <View style={{ borderBottomWidth: selectedButton === "bebidasGeladas" ? 2 : 0, 
+            <View style={{ borderBottomWidth: selectedButton === "bebidasGeladas" ? 2 : 0, // Se 'selectedButton' for "bebidasGeladas", a largura da borda inferior será 2, caso contrário, será 0.
             borderColor: "#d4a57b", width: 50 }} />
           </TouchableOpacity>
          
           {/* Botão que desce a View até "Comida" */}
-          <TouchableOpacity style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "comidas" ? "white" : "white" }]} 
-            onPress={() => {scrollToSection(3210); setSelectedButton("comidas")}}>
-            <Text style={{ color: selectedButton === "comidas" ? "#d4a57b" : "black" }}
+          <TouchableOpacity 
+            // Define o estilo do botão usando 'styles.botaocoffemenu'. A cor de fundo é branca, independentemente do estado.
+            style={[styles.botaocoffemenu, {backgroundColor: selectedButton === "comidas" ? "white" : "white" }]} 
+            onPress={() => 
+            // Rola a tela até a posição 650 pixels na vertical e seleciona o botão ativo                
+            {scrollToSection(3210); setSelectedButton("comidas")}}>
+            {/* Texto do botão */}
+            <Text style={{ color: selectedButton === "comidas" ? "#d4a57b" : "black" }} // Se 'selectedButton' for "comidas", a cor será '#d4a57b', caso contrário, será 'black'
             >Comidas</Text>
-            <View style={{ borderBottomWidth: selectedButton === "comidas" ? 2 : 0, 
+            <View style={{ borderBottomWidth: selectedButton === "comidas" ? 2 : 0, // Se 'selectedButton' for "comidas", a largura da borda inferior será 2, caso contrário, será 0.
             borderColor: "#d4a57b", width: 50 }} />
           </TouchableOpacity>
         </View>

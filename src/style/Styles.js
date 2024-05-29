@@ -227,9 +227,35 @@ export const styles = StyleSheet.create({
     borderColor: "black",
     backgroundColor: "white",
   },
+
   modal2: {
     width: 20,
     height: 40,
+  },
+
+
+  btnpagar: {
+    backgroundColor: "#d4a57b",
+    width: 120,
+    height: 50,
+    borderRadius: 50,
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    left: "60%",
+    borderBottomWidth: 1,
+  },
+
+
+  btnconcluir: {
+    backgroundColor: "#d4a57b",
+    width: 100,
+    borderRadius: 50,
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    top: "85%",
+    left: "38%",
   },
 
   // Pág Sobre
@@ -1336,7 +1362,31 @@ export const styles = StyleSheet.create({
     backgroundColor: "transparent",
     justifyContent: "space-between",
   },
+
   containermodal: {
     flex: 1,
+  },
+
+  resultado: {
+    fontSize: 20,
+    fontWeight: "200",
+    bottom:50,
+    left:50,
+    width:"50%",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "900",
+    marginTop: "200",
+    top: 20,
+    alignItems: "center",
+    textAlign: "center",
+  },
+
+  funcao: {
+    fontSize: 20,
+    fontWeight: "700",
+    bottom:50,
+    left:80,
   },
 });

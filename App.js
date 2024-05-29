@@ -6,7 +6,9 @@ import { styles } from "./src/style/Styles";
 import Login from "./src/pages/Login";
 import Cadastro from "./src/pages/Cadastro";
 import Menu from "./src/pages/Menu";
+import Sobre from "./src/pages/Sobre";
 import Carrinho from "./src/pages/Carrinho";
+import Galeria from "./src/pages/Galeria";
 // Importa o componente de drawer personalizado
 import CustomDrawer from "./src/componentes/CustomDrawer";
 
@@ -22,7 +24,15 @@ export default function App() {
     "TitanOne-Regular": require("./src/assets/Fonts/TitanOne-Regular.ttf"),
   });
 
+  const [fonstLoaded2] = useFonts({
+    "Baskervville-Regular": require("./src/assets/Fonts/Baskervville-Regular.ttf"),
+  });
+
   // Se as fontes não foram carregadas ainda, retorna undefined 
+  if (!fonstLoaded2) {
+    return undefined;
+  }
+
   if (!fonstLoaded) {
     return undefined;
   }
@@ -56,6 +66,16 @@ export default function App() {
         <Drawer.Screen
           name="Carrinho"
           component={Carrinho}
+          options={{
+          headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
+          headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
+          }}
+        />
+        <Drawer.Screen name="Galeria" component={Galeria} />
+         {/* Define a tela "Sobre" no drawer */}
+        <Drawer.Screen
+          name="Sobre"
+          component={Sobre}
           options={{
           headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
           headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"

@@ -52,7 +52,7 @@ const AnimatedItem = ({ item }) => {
   };
 
   const alertView = () => {
-    alert("TOUCH VIEW");
+    alert("Tem certeza que quer apagar este item?");
   };
 
   return (
@@ -76,7 +76,7 @@ const AnimatedItem = ({ item }) => {
         }}
         onTouchStart={dispararAnimation}
       >
-        <Text>{item.title}</Text>
+        <Text style={{ fontSize: 15, fontWeight: "700" }}>{item.title}</Text>
       </Animated.View>
       {mostrarTouch && (
         <Animated.View
@@ -113,8 +113,9 @@ export default function Carrinho() {
   const [vis, setVis] = useState(false);
 
   const data = [
-    { id: "1", title: "View Animada 1" },
-    { id: "2", title: "View Animada 2" },
+    { id: "1", title: "Café expresso" },
+    { id: "2", title: "Milkshake de chocolate" },
+    { id: "3", title: "Cookies", backgroundColor: "white" },
   ];
 
   return (
@@ -133,43 +134,57 @@ export default function Carrinho() {
           style={{
             fontSize: 20,
             fontFamily: "TitanOne-Regular",
+            marginTop: 20,
+            left: 18,
           }}
         >
           Meus pedidos:
         </Text>
 
-        <View style={{ flex: 1, backgroundColor: "yellow" }}>
-        <FlatList
-        data={data}
-        renderItem={({ item }) => <AnimatedItem item={item} />}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.flatListContent}
-      />
-    
-      <Modal transparent={true} visible={vis}>
-        <View style={{ flex: 1,  justifyContent: 'flex-end'}}>
-          <View style={{ width: '100%', height: '50%', backgroundColor: 'white'}}>
-            
+        <View style={{ flex: 1 }}>
+          <FlatList
+            data={data}
+            renderItem={({ item }) => <AnimatedItem item={item} />}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={styles.flatListContent}
+          />
 
-
-            <Text>Modal Carrinho!</Text>
-            <TouchableOpacity style={{ backgroundColor: 'red', width: 100 , borderRadius: 50, padding: 10, justifyContent: 'center', alignItems: 'center'}}  
-            onPress={() => setVis(false)} >
-          <Text>Concluir</Text>
-        </TouchableOpacity>
-
-
-
-          </View>
+          <Modal transparent={true} visible={vis}>
+            <View
+              style={{
+                flex: 1,
+                justifyContent: "flex-end",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+              }}
+            >
+              <View
+                style={{
+                  width: "100%",
+                  height: "75%",
+                  backgroundColor: "white",
+                  borderRadius: 10,
+                }}
+              >
+                <Text style={styles.text}>Confirme seu pagamento</Text>
+                <TouchableOpacity
+                  style={styles.btnconcluir}
+                  onPress={() => setVis(false)}
+                >
+                  <Text>Concluir</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </Modal>
         </View>
-      </Modal>
-        </View>
-        <View
-          style={{ height: "10%", width: "100%", backgroundColor: "green" }}>
-             <TouchableOpacity style={{ backgroundColor: "#d4a57b", width: 100 , borderRadius: 50, padding: 10, justifyContent: 'center', alignItems: 'center', left:"70%", borderBottomWidth:1}}onPress={() => setVis(true)} >
-        <Text>Pagar</Text>
-      </TouchableOpacity>
-        
+        <View style={{ height: "13%", width: "100%" }}>
+          <TouchableOpacity
+            style={styles.btnpagar}
+            onPress={() => setVis(true)}
+          >
+            <Text>Pagar</Text>
+          </TouchableOpacity>
+          <Text style={styles.resultado}>Seu pedido ficou:</Text>
+            <Text style={styles.funcao}>Função</Text>
         </View>
       </View>
     </View>
