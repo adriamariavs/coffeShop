@@ -1,5 +1,5 @@
 // Importações necessárias do React Native
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Modal } from "react";
 import { View, Image, Text, TouchableOpacity, ScrollView, Animated, } from "react-native";
 import { styles } from "../style/Styles"; 
 import { useNavigation } from "@react-navigation/native";
@@ -91,6 +91,7 @@ export default function Menu() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
+
       {/* Contêiner de rolagem */}
       <ScrollView ref={scrollViewRef} showsVerticalScrollIndicator={false}>
         
@@ -796,6 +797,7 @@ style={styles.ImgHot6} />
     </View> 
 
       </ScrollView>
+
     </View>
     
 

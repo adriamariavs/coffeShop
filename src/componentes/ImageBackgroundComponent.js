@@ -5,7 +5,13 @@ import { useState } from "react";
 
 const data = [
   { id: 1, imgUrl: require("../assets/image/EntregaCafe.png") },
-  { id: 2, imgUrl: require("../assets/image/MaquinaCafe.png") },
+  { id: 3, imgUrl: require("../assets/image/MaquinaCafe.png") },
+  { id: 4, imgUrl: require("../assets/image/CafeChantili.png") },
+  { id: 5, imgUrl: require("../assets/image/CafeGraçon.png") },
+  { id: 6, imgUrl: require("../assets/image/CafeTarde.png") },
+  { id: 7, imgUrl: require("../assets/image/DateCafe.png") },
+  { id: 8, imgUrl: require("../assets/image/Forno.png") },
+  { id: 9, imgUrl: require("../assets/image/PreparandoCafe.png") },
 ];
 
 
@@ -19,7 +25,7 @@ export default function ImageBackgroundComponent({ imageBK, styles }) {
         style={{
           width: 100,
           height: 100,
-          backgroundColor: "red",
+          backgroundColor: "black",
           borderRadius: 20,
           marginLeft: 20,
           overflow: "hidden",

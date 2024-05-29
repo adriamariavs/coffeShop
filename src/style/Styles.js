@@ -215,51 +215,6 @@ export const styles = StyleSheet.create({
     marginBottom: 50,
   },
 
-  // Pág Carrinho
-  Btncomprar: {
-    alignSelf: "center",
-    top: 700,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 43,
-    width: 130,
-    backgroundColor: "#d4a57b",
-    borderColor: "black",
-    backgroundColor: "white",
-  },
-
-  modal2: {
-    width: 20,
-    height: 40,
-  },
-
-
-  btnpagar: {
-    backgroundColor: "#d4a57b",
-    width: 120,
-    height: 50,
-    borderRadius: 50,
-    padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    left: "60%",
-    borderBottomWidth: 1,
-  },
-
-
-  btnconcluir: {
-    backgroundColor: "#d4a57b",
-    width: 100,
-    borderRadius: 50,
-    padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    top: "85%",
-    left: "38%",
-  },
-
-  // Pág Sobre
-
   // CARDAPIO Hot Coffee -- item 1
   viewHotCoffe1: {
     height: 300,
@@ -1371,22 +1326,117 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "200",
     bottom:50,
-    left:50,
+    left:35,
     width:"50%",
   },
-  text: {
-    fontSize: 20,
-    fontWeight: "900",
-    marginTop: "200",
-    top: 20,
+
+  btnpagar: {
+    backgroundColor: "#d4a57b",
+    width: 120,
+    height: 50,
+    borderRadius: 50,
+    padding: 10,
+    justifyContent: "center",
     alignItems: "center",
-    textAlign: "center",
+    left: "60%",
+    borderBottomWidth: 1,
   },
+
 
   funcao: {
     fontSize: 20,
     fontWeight: "700",
     bottom:50,
-    left:80,
+    left:75,
   },
+
+  //Dentro do MODAL
+
+  text: {
+    fontSize: 20,
+    fontWeight: "900",
+    marginTop: 50,
+    left: 25,
+  },
+
+  btnconcluir: {
+    backgroundColor: "#d4a57b",
+    width: 120,
+    height: 50,
+    borderRadius: 50,
+    borderBottomWidth:1,
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 30,
+    left: "60%",
+  },
+
+  viewDentroModal: {
+    width: 340,
+    height: 110,
+    marginTop: 50,
+    alignSelf: 'center',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+    borderRadius: 20,
+    backgroundColor: "white",
+  },
+
+  viewDentroModal2: {
+    width: 340,
+    height: 110,
+    marginTop: 30,
+    alignSelf: 'center',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+    borderRadius: 20,
+    backgroundColor: "white",
+  },
+
+  risco: {
+   height: 1,
+   width: '100%',
+   marginTop: 50,
+   backgroundColor: '#C0C0C0',
+  },
+
+  botaorolagem: {
+  width: 50,
+  height: 50,
+  },
+
+  resultadoModal: {
+    fontSize: 20,
+    fontWeight: "200",
+    bottom:60,
+    left:30,
+    width:"50%",
+  },
+
+  funcaoModal: {
+    fontSize: 20,
+    fontWeight: "700",
+    bottom:60,
+    left:65,
+  },
+
+  cartaoDebito: {
+    marginTop: -80,
+    left: 150,
+    fontFamily: 'Baskervville-Regular',
+  },
+
+  cartaoCredito: {
+    marginTop: -35,
+    left: 150,
+    fontFamily: 'Baskervville-Regular',
+  },
+
 });

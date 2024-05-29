@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Dimensions,
   FlatList,
+  Image,
 } from "react-native";
 import { Entypo } from "@expo/vector-icons"; //Icone
 
@@ -149,7 +150,7 @@ export default function Carrinho() {
             contentContainerStyle={styles.flatListContent}
           />
 
-          <Modal transparent={true} visible={vis}>
+          <Modal transparent={true} visible={vis} animationType="fade">
             <View
               style={{
                 flex: 1,
@@ -160,18 +161,40 @@ export default function Carrinho() {
               <View
                 style={{
                   width: "100%",
-                  height: "75%",
+                  height: "70%",
                   backgroundColor: "white",
                   borderRadius: 10,
                 }}
               >
-                <Text style={styles.text}>Confirme seu pagamento</Text>
+                <Text style={styles.text}>Confirme seu pagamento:</Text>
+
+                 <View style={styles.viewDentroModal}>
+                 <Image
+                  source={require("../assets/image/visa.png")}
+                  style={{ height:"80%", width:"30%", left: 10, borderRadius: 25, marginTop: 40, }}
+                 />
+                 <Text style={styles.cartaoDebito}>Cartão de crédito</Text>
+                 </View>
+
+                 <View style={styles.viewDentroModal2}>
+                 <Image
+                  source={require("../assets/image/master.png")}
+                  style={{ height:"80%", width:"30%", left: 10, borderRadius: 25, marginTop: -5, }}
+                 />
+                 <Text style={styles.cartaoCredito}>Cartão de débito</Text>
+                 </View>
+
+                 <View style={styles.risco}>
+                 </View>
+
                 <TouchableOpacity
                   style={styles.btnconcluir}
                   onPress={() => setVis(false)}
                 >
                   <Text>Concluir</Text>
                 </TouchableOpacity>
+                <Text style={styles.resultadoModal}>Seu pedido ficou:</Text>
+                <Text style={styles.funcaoModal}>Função</Text>
               </View>
             </View>
           </Modal>
@@ -184,7 +207,7 @@ export default function Carrinho() {
             <Text>Pagar</Text>
           </TouchableOpacity>
           <Text style={styles.resultado}>Seu pedido ficou:</Text>
-            <Text style={styles.funcao}>Função</Text>
+          <Text style={styles.funcao}>Função</Text>
         </View>
       </View>
     </View>
