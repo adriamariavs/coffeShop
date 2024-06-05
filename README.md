@@ -7,6 +7,7 @@
 <h4>Para abrir no celular, basta abrir com a câmera o QR code que aparece no terminal (para isso, também é preciso que você tenha instalado no seu celular, o aplicativo Expo Go).  <br></h4>
 
 <h1>Pacotes que precisam ser instalados para o funcionamento do aplicativo Coffee Shop:<h1>
+  
 <h4>-useNavigation: npm install @react-navigation/native @react-navigation/native-stack ; <br></h4>
 <h4>-Axios: npm install axios ; <br></h4>
 <h4>-Carousel: npm install --save react-native-snap-carousel ; <br></h4>
