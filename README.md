@@ -1,4 +1,5 @@
 Instruções de configuração, instalação, e uso do aplicativo Coffee Shop: 
+
 -Primeiramente, clique no botão "Code" e copie a URL deste projeto; 
 -Em seguida abra o terminal, ative o Node-js, e digite o seguinte comando: git clone COLE_AQUI_A_URL; 
 -Logo após, entre no diretório, utilizando o seguinte código: cd coffee_Shop; 
