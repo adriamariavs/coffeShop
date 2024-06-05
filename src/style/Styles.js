@@ -215,6 +215,13 @@ export const styles = StyleSheet.create({
     marginBottom: 50,
   },
 
+  carrinhoImg: {
+    zIndex: 2,
+    backgroundColor: "#d4a57b",
+    left: "90%",
+    bottom: 40,
+  },
+
   // CARDAPIO Hot Coffee -- item 1
   viewHotCoffe1: {
     height: 300,
@@ -1325,9 +1332,9 @@ export const styles = StyleSheet.create({
   resultado: {
     fontSize: 20,
     fontWeight: "200",
-    bottom:50,
-    left:35,
-    width:"50%",
+    bottom: 50,
+    left: 35,
+    width: "50%",
   },
 
   btnpagar: {
@@ -1339,15 +1346,37 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     left: "60%",
+    marginTop: 20,
     borderBottomWidth: 1,
   },
-
 
   funcao: {
     fontSize: 20,
     fontWeight: "700",
-    bottom:50,
-    left:75,
+    bottom: 50,
+    left: 75,
+  },
+
+  carrinhopag: {
+    height: 100,
+    width: "100%",
+    backgroundColor: "#d4a57b",
+    marginTop: -20,
+    borderBottomLeftRadius: 60,
+  },
+
+  textCarrinho: {
+    fontSize: 20,
+    fontFamily: "TitanOne-Regular",
+    marginTop: 20,
+    left: 18,
+  },
+
+  modalprincipal: {
+    width: "100%",
+    height: "85%",
+    backgroundColor: "white",
+    borderRadius: 10,
   },
 
   //Dentro do MODAL
@@ -1364,7 +1393,7 @@ export const styles = StyleSheet.create({
     width: 120,
     height: 50,
     borderRadius: 50,
-    borderBottomWidth:1,
+    borderBottomWidth: 1,
     padding: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -1376,7 +1405,7 @@ export const styles = StyleSheet.create({
     width: 340,
     height: 110,
     marginTop: 50,
-    alignSelf: 'center',
+    alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.5,
@@ -1390,7 +1419,21 @@ export const styles = StyleSheet.create({
     width: 340,
     height: 110,
     marginTop: 30,
-    alignSelf: 'center',
+    alignSelf: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+    borderRadius: 20,
+    backgroundColor: "white",
+  },
+
+  viewDentroModal3: {
+    width: 340,
+    height: 110,
+    marginTop: 30,
+    alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.5,
@@ -1401,42 +1444,78 @@ export const styles = StyleSheet.create({
   },
 
   risco: {
-   height: 1,
-   width: '100%',
-   marginTop: 50,
-   backgroundColor: '#C0C0C0',
+    height: 1,
+    width: "100%",
+    marginTop: 50,
+    backgroundColor: "#C0C0C0",
+  },
+
+  risco1: {
+    height: 1,
+    width: "100%",
+    marginTop: -15,
+    backgroundColor: "#C0C0C0",
   },
 
   botaorolagem: {
-  width: 50,
-  height: 50,
+    width: 50,
+    height: 50,
   },
 
   resultadoModal: {
     fontSize: 20,
     fontWeight: "200",
-    bottom:60,
-    left:30,
-    width:"50%",
+    bottom: 60,
+    left: 30,
+    width: "50%",
   },
 
   funcaoModal: {
     fontSize: 20,
     fontWeight: "700",
-    bottom:60,
-    left:65,
+    bottom: 60,
+    left: 65,
   },
 
   cartaoDebito: {
     marginTop: -80,
     left: 150,
-    fontFamily: 'Baskervville-Regular',
+    fontFamily: "Baskervville-Regular",
   },
 
   cartaoCredito: {
     marginTop: -35,
     left: 150,
-    fontFamily: 'Baskervville-Regular',
+    fontFamily: "Baskervville-Regular",
   },
 
+  Pix: {
+    marginTop: -50,
+    left: 155,
+    fontFamily: "Baskervville-Regular",
+  },
+
+  visa: {
+    height: "80%",
+    width: "30%",
+    left: 10,
+    borderRadius: 25,
+    marginTop: 40,
+  },
+
+  master: {
+    height: "80%",
+    width: "30%",
+    left: 10,
+    borderRadius: 25,
+    marginTop: -5,
+  },
+
+  pixImg: {
+    height: "80%",
+    width: "30%",
+    left: 10,
+    borderRadius: 25,
+    marginTop: 10,
+  },
 });

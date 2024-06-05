@@ -28,12 +28,19 @@ export default function App() {
     "Baskervville-Regular": require("./src/assets/Fonts/Baskervville-Regular.ttf"),
   });
 
-  // Se as fontes não foram carregadas ainda, retorna undefined 
+  const [fonstLoaded3] = useFonts({
+    "DMSerifDisplay-Regular": require("./src/assets/Fonts/DMSerifDisplay-Regular.ttf"),
+  });
+  // Se as fontes não foram carregadas ainda, retorna undefined
   if (!fonstLoaded2) {
     return undefined;
   }
 
   if (!fonstLoaded) {
+    return undefined;
+  }
+
+  if (!fonstLoaded3) {
     return undefined;
   }
 
@@ -57,7 +64,7 @@ export default function App() {
           options={{
             headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Menu"
           }}
-        />  
+        />
         {/* Define a tela "Login" no drawer */}
         <Drawer.Screen name="Login" component={Login} />
         {/* Define a tela "Cadastro" no drawer */}
@@ -67,18 +74,18 @@ export default function App() {
           name="Carrinho"
           component={Carrinho}
           options={{
-          headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
-          headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
+            headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
+            headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
           }}
         />
         <Drawer.Screen name="Galeria" component={Galeria} />
-         {/* Define a tela "Sobre" no drawer */}
+        {/* Define a tela "Sobre" no drawer */}
         <Drawer.Screen
           name="Sobre"
           component={Sobre}
           options={{
-          headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
-          headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
+            headerStyle: { backgroundColor: "#4f3724" }, // Estilo do cabeçalho da tela "Carrinho"
+            headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
           }}
         />
       </Drawer.Navigator>

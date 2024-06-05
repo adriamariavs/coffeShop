@@ -1,93 +1,60 @@
 import { View, Text, Image } from "react-native";
+import { styles } from "../style/Styles";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function Sobre() {
   return (
     <View style={{ flex: 1 }}>
-    <ScrollView>
-      <View
-        style={{
-          height: 130,
-          width: "100%",
-          backgroundColor: "#d4a57b",
-          borderBottomLeftRadius: 60,
-        }}
-      >
+      <ScrollView>
+        <View
+          style={{
+            height: 580,
+            width: "100%",
+            borderRadius: 100,
+          }}
+        >
+          <Image
+            source={require("../assets/image/sobreTeste2.png")}
+            style={{
+              height: "100%",
+              width: "100%",
+              borderBottomRightRadius: 80,
+              borderBottomLeftRadius: 80,
+            }}
+          />
+        </View>
+
         <Text
           style={{
-            fontFamily: "TitanOne-Regular",
-            fontSize: 25,
-
-            marginTop: 40,
-            left: 80,
+            textAlign: "center",
+            fontSize: 30,
+            fontFamily: "DMSerifDisplay-Regular",
+            marginTop: 35,
           }}
         >
-          Sobre Nós
+          Conheça mais sobre nós!
         </Text>
-        <Image
-          source={require("../assets/icons/graos.png")}
-          style={{ height: 70, width: 60, left: 240, marginTop: -50 }}
-        />
-      </View>
 
-      <Text
-        style={{
-          fontSize: 20,
-          marginTop: 15,
-          textAlign: 'justify',
-          marginLeft: 15,
-          marginRight: 15,
-          fontFamily: 'Baskervville-Regular',
-        }}
-      >
-        Nosso aplicativo de cafeteria virtual oferece uma experiência única e
-        conveniente para os amantes de café e gastronomia gourmet. Com ele, você
-        pode explorar uma vasta seleção de cafés especiais, doces artesanais e
-        salgados gourmet, tudo na palma da sua mão. Navegue por um cardápio
-        diversificado que inclui opções de cafés gourmet, chás especiais, bolos,
-        sanduíches e outras opções deliciosas, tudo cuidadosamente selecionado
-        por nossos especialistas.
-      </Text>
-      
-      <View style={{
-        height: 300,
-        width: "100%",
-        justifyContent: "center",
-        alignItems: 'center',
-      }}>
+        <View
+          style={{ width: "100%", height: 100, backgroundColor: "#F8F8FF" }}>
 
-    <View style={{
-        width: 250,
-        height: 250,
-        alignItems: "flex-end",
-        left: 75,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 5 },
-        shadowOpacity: 0.5,
-        shadowRadius: 10,
-        elevation: 5,
-        borderRadius: 20,
-        backgroundColor: "white",
-    }}>
-
-    <Image
-        source={require("../assets/image/cafeteriaS.png")}
-        style={{ height:"90%", width:"90%", left: -45, borderRadius: 25, marginTop: 13, }}
-    />
-
-    <Text
-        style={{
-        fontFamily: "TitanOne-Regular",
-        fontSize: 25,
+          <Text
+          style={{
+            textAlign: "center",
+            fontSize: 30,
+            marginTop: 35,
           }}
         >
-          Sobre Nós
+          O aplicativo de cardápio virtual de café oferece aos usuários uma 
+          experiência digital para explorar uma variedade de opções de cafés, 
+          doces e salgados gourmet. Com que permita visualizar descrições, 
+          imagens atraentes e informações sobre ingredientes e preços. Ideal 
+          para entusiastas de café que buscam conveniência e sofisticação, o 
+          aplicativo facilita a escolha e o pedido de suas delícias favoritas 
+          diretamente de seu dispositivo móvel.
         </Text>
-        
-    </View>
-   
-      </View>
 
+        </View>
       </ScrollView>
     </View>
   );
