@@ -6,7 +6,6 @@ import { styles } from "./src/style/Styles";
 import Login from "./src/pages/Login";
 import Cadastro from "./src/pages/Cadastro";
 import Menu from "./src/pages/Menu";
-import Sobre from "./src/pages/Sobre";
 import Carrinho from "./src/pages/Carrinho";
 import Galeria from "./src/pages/Galeria";
 // Importa o componente de drawer personalizado
@@ -78,16 +77,14 @@ export default function App() {
             headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
           }}
         />
-        <Drawer.Screen name="Galeria" component={Galeria} />
-        {/* Define a tela "Sobre" no drawer */}
-        <Drawer.Screen
-          name="Sobre"
-          component={Sobre}
-          options={{
-            headerStyle: { backgroundColor: "#4f3724" }, // Estilo do cabeçalho da tela "Carrinho"
+        <Drawer.Screen name="Galeria" 
+        component={Galeria} 
+        options={{
+            headerStyle: { backgroundColor: "#d4a57b" }, // Estilo do cabeçalho da tela "Carrinho"
             headerShadowVisible: false, // Remove a sombra do cabeçalho da tela "Carrinho"
           }}
         />
+        {/* Define a tela "Sobre" no drawer */}
       </Drawer.Navigator>
     </NavigationContainer>
   );

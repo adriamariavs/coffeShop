@@ -21,7 +21,7 @@ export default function Cadastro() {
 
     try {
       const newUser = { nome_completo: nomeCompleto, email, senha };
-      const response = await axios.post('http://localhost:3000/cadastro', newUser);
+      const response = await axios.post('http://10.0.2.15:3000/cadastro', newUser);
       Alert.alert('Sucesso', 'Cadastro realizado com sucesso!');
       navigation.navigate('Login');
     } catch (error) {

@@ -1,10 +1,8 @@
-import { View, Text } from "react-native";
-import { styles, useNavigation } from "../style/Styles";
-import ButtonComponents from "../componentes/ButtonComponents";
+import { View } from "react-native";
+import { styles } from "../style/Styles";
 import ImageBackgroundComponent from "../componentes/ImageBackgroundComponent";
 
 export default function Galeria() {
-  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>

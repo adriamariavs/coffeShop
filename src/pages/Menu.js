@@ -1,13 +1,6 @@
 // Importações necessárias do React Native
 import React, { useState, useEffect, useRef, Modal } from "react";
-import {
-  View,
-  Image,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Animated,
-} from "react-native";
+import { View, Image, Text, TouchableOpacity, ScrollView, Animated } from "react-native";
 import { styles } from "../style/Styles";
 import { useNavigation } from "@react-navigation/native";
 

@@ -2,15 +2,7 @@ import { Modal } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
 import { styles } from "../style/Styles";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Text,
-  View,
-  Animated,
-  TouchableOpacity,
-  Dimensions,
-  FlatList,
-  Image,
-} from "react-native";
+import { Text, View, Animated, TouchableOpacity, Dimensions, FlatList, Image } from "react-native";
 import { Entypo } from "@expo/vector-icons"; // Importando ícone
 
 // Obtendo a largura da tela e definindo a largura final da animação
