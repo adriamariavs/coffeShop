@@ -14,5 +14,5 @@
 
 Primeiramente clone o repositório com o seguinte comando: 
 ```
-git clone 
+git clone https://github.com/adriamariavs/coffeShop.git
 ```
