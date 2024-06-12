@@ -1,4 +1,4 @@
-Instruções de configuração, instalação, e uso do aplicativo Coffee Shop: <br><br>
+<strong>Instruções de configuração, instalação, e uso do aplicativo Coffee Shop: </strong><br><br>
 🔗 Primeiramente clone o repositório com o seguinte comando: 
 ```
 git clone https://github.com/adriamariavs/coffeShop.git
@@ -16,7 +16,7 @@ npm install
 npx expo start-- tunnel
 ```
 <br>
-Pacotes que precisam ser instalados para o funcionamento do aplicativo Coffee Shop:<br><br>
+<strong>Pacotes que precisam ser instalados para o funcionamento do aplicativo Coffee Shop:</strong><br><br>
   
 🔗-useNavigation: 
 ```
